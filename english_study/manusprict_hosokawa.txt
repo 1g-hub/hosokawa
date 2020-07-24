@@ -1,0 +1,23 @@
+Good morning everyone. I'm Takehiro Hosokaewa at Software system group.
+Today, I'd like to about Ensemble Learning using augmentation policies.
+
+There are five things I'd like to talk on this presentation. First,background. Second,purpose. Third,methods. fourth,conclusion,and Fifth,future works.
+
+Recently,in machine learning,we have achieved results in various tasks:natural language,images,and music etc. However, until those achievements, researchers had to struggle to find proper hyperparameters. So now, researchers are actively researching automation of hyperparameter determination. especially,automation of data augmentation is called AutoAugment.This presentation proposes a method to reduce the time taken for AutoAugment.
+
+Do you come up with an idea? The simple method is to use the smaller model. But,the smaller the model,the worse accuracy.So
+i propse to use ensemble learning to solve this problem. 
+
+So next,i explain three important methods.
+First is Convlutional Neural Network.This network is neural network with convoluional layers. This network is much smaller than that used in previous research. But,this network is also often used for image recognition.
+Second is GeneticAlgorithm. This is an algorithm based on the evolution of living things. 
+I will briefly explain the flow of the algorithm.There are four stage. 
+The first stage is initialization. I define a data type for what i want to search. and,generate random individuals to match that type.
+The second stage is to calculate fitness.This time,fitness was accuracy that obtained by learning CNN using data augment alog individuals.
+The third is to creat next population. Generate the next individuals based on the fitness associated with the individual.There are three operations to generate : selection,crossover, and mutation.
+The last stage,to repeat Second and Third stage until a good individual appears.
+The algorithm mainly has three types of operations: selection, crossover and mutation. 
+Last is ensemble learning.This is a method to combine multiple weak learners into one learner.In general,the more weak learners there are,the higher accuracy.And,weak learners need to be diversity to get higher accuracy.If there is a lot of train data, you can obtain multiple learners by using that data separately. In this time,i got some learners by using that augmented data with some policies.
+
+In,conclusion,It was confirmed that ensemble learning is effective.And,data augmentation used for ensemble learning can search by Genetic Algorithm. However, we need to decide proper setting.
+And,as future work,need to increase number of generations and individuals. And also,we must puropose a semantic diversity maintaining algorithm. If i tackle these two issues well, i will get good accuracy with a really simpler model.
