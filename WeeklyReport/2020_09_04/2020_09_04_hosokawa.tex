@@ -1,0 +1,115 @@
+%\documentstyle[epsf,twocolumn]{jarticle}       %LaTeX2e仕様
+\documentclass[twocolumn]{jarticle}     %pLaTeX2e仕様(platex.exeの場合)
+%\documentclass[twocolumn]{ujarticle}     %pLaTeX2e仕様(uplatex.exeの場合)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  基本バージョン
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\topmargin}{-45pt}
+%\setlength{\oddsidemargin}{0cm} 
+\setlength{\oddsidemargin}{-7.5mm}
+%\setlength{\evensidemargin}{0cm} 
+\setlength{\textheight}{24.1cm}
+%setlength{\textheight}{25cm} 
+\setlength{\textwidth}{17.4cm}
+%\setlength{\textwidth}{172mm} 
+\setlength{\columnsep}{11mm}
+
+\kanjiskip=.07zw plus.5pt minus.5pt
+
+
+% 【節が変わるごとに (1.1)(1.2) … (2.1)(2.2) と数式番号をつけるとき】
+%\makeatletter
+%\renewcommand{\theequation}{%
+%\thesection.\arabic{equation}} %\@addtoreset{equation}{section}
+%\makeatother
+
+%\renewcommand{\arraystretch}{0.95} 行間の設定
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[dvipdfmx]{graphicx}   %pLaTeX2e仕様(\documentstyle ->\documentclass)\documentclass[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage[subrefformat=parens]{subcaption}
+\usepackage{colortbl}
+\usepackage{multicol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\twocolumn[
+\noindent
+
+\hspace{1em}
+\today
+\hfill
+\ \ 細川　岳大
+
+\vspace{2mm}
+
+\hrule
+
+\begin{center}
+{\Large \bf 進捗報告}
+\end{center}
+\hrule
+\vspace{3mm}
+]
+
+% ここから 文章 Start!
+
+\section{今週やったこと}
+\begin{itemize}
+ 	\item SSLの手法調査
+\end{itemize}
+
+
+\section{SSLの手法調査}
+SSLにおけるモチベーションとして
+，少量のラベル付きデータと大量ラベルなしデータがあるといった状況
+に利用されることはもちろんあるが，
+一方でラベルが付いたデータが絞られることで各ラベルに対する複雑化したデータ分布を
+狙ったものにしやすくなる可能性がある．
+
+\subsection{分類器による手法}
+ラベル付きデータによる分類器からラベルなしデータの疑似ラベルを生成する．
+そして確信度などの指標を用いて閾値を超えた疑似ラベルを実際のラベルとみなすことで，
+ラベル付きデータを水増しする手法．
+\begin{itemize}
+	\item 自己訓練(Self Training)
+	\item 共訓練(Co-Training)
+	\item FixMatch
+\end{itemize}
+
+\subsection{データ分布に基づく手法}
+ラベル付きデータによって得られる決定境界に対し，
+ラベルなしデータを用いて滑らかにする手法．
+\begin{itemize}
+	\item Virtual Adversarial training(:VAT)
+	\item Unsupervised Data Augmentation(:UDA)
+	\item Ladder Network
+\end{itemize}
+
+\subsection{感想}
+SSLにおいて前者のようなラベルなしデータにラベル付けをして学習を進める手法より，後者のようなラベルなしデータを
+ラベル付けを行わずに学習をするもののほうがcifar10やMNISTなどのタスクで精度を上げていた．
+より複雑な問題ではどうか分からないがラベルなしデータにラベル付けをしたうえで学習する方法だけでは
+あまりいいものが得られない気がする．\\
+FixMatchやUDAにおいてノイズとしてRand Augmentを用いたData Augmentationが用いられており，
+一部的ではあるがGAを組み込まれたものとなっている．
+
+
+\section{今後の方針}
+すでに考えらているだろうが，ラベルなしデータの一部に対し前者の方法でラベル付きデータを水増ししたうえで
+後者の方法で学習することはできないか．もし，有効であったとしてどの程度まで増やしていいのか．\\
+GAによってどのラベルなしデータをラベル付きデータにするのかを探索する．
+
+
+\section{来週の課題}
+\begin{itemize}
+	\item SSLの実装及び実験
+\end{itemize}
+
+\end{document}
+
+
