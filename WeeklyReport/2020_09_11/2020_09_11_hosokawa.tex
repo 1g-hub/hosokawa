@@ -1,0 +1,107 @@
+%\documentstyle[epsf,twocolumn]{jarticle}       %LaTeX2e仕様
+\documentclass[twocolumn]{jarticle}     %pLaTeX2e仕様(platex.exeの場合)
+%\documentclass[twocolumn]{ujarticle}     %pLaTeX2e仕様(uplatex.exeの場合)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  基本バージョン
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\topmargin}{-45pt}
+%\setlength{\oddsidemargin}{0cm} 
+\setlength{\oddsidemargin}{-7.5mm}
+%\setlength{\evensidemargin}{0cm} 
+\setlength{\textheight}{24.1cm}
+%setlength{\textheight}{25cm} 
+\setlength{\textwidth}{17.4cm}
+%\setlength{\textwidth}{172mm} 
+\setlength{\columnsep}{11mm}
+
+\kanjiskip=.07zw plus.5pt minus.5pt
+
+
+% 【節が変わるごとに (1.1)(1.2) … (2.1)(2.2) と数式番号をつけるとき】
+%\makeatletter
+%\renewcommand{\theequation}{%
+%\thesection.\arabic{equation}} %\@addtoreset{equation}{section}
+%\makeatother
+
+%\renewcommand{\arraystretch}{0.95} 行間の設定
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[dvipdfmx]{graphicx}   %pLaTeX2e仕様(\documentstyle ->\documentclass)\documentclass[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage[subrefformat=parens]{subcaption}
+\usepackage{colortbl}
+\usepackage{multicol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\twocolumn[
+\noindent
+
+\hspace{1em}
+\today
+\hfill
+\ \ 細川　岳大
+
+\vspace{2mm}
+
+\hrule
+
+\begin{center}
+{\Large \bf 進捗報告}
+\end{center}
+\hrule
+\vspace{3mm}
+]
+
+% ここから 文章 Start!
+
+\section{今週やったこと}
+\begin{itemize}
+ 	\item Virtual Adversarial Training(:VAT)の実装中
+\end{itemize}
+
+
+\section{Virtual Adversarial Training(:VAT)}
+Virtual Adversarial Training(:VAT)は事後確率の分布を滑らかにして
+汎化性能の向上させることを目的とした手法である．\\
+
+\subsection{損失}
+事後確率の分布を滑らかにするためにデータ$\mbox{\boldmath $x$}$自身とそれに小さな摂動$\mbox{\boldmath $r$}$
+を付与したもの事後確率の距離を近づけることでそれを達成する．
+$KLD\left[ p(\mbox{\boldmath $y$}|\mbox{\boldmath $x$}),p(\mbox{\boldmath $y$}|\mbox{\boldmath $x$}+\mbox{\boldmath $r$})\right]$
+を最小化するためこれの平均値を損失として加える．\\
+また，$\mbox{\boldmath $r$}$について全方向で行うのは現実的でないため
+$KLD\left[ p(\mbox{\boldmath $y$}|\mbox{\boldmath $x$}),p(\mbox{\boldmath $y$}|\mbox{\boldmath $x$}+\mbox{\boldmath $r$})\right]$
+を最大化する$\mbox{\boldmath $r$}_{vadv}$についてのみ算出する．\\
+\\
+前述の$KLD$
+を$D(\mbox{\boldmath $r$},\mbox{\boldmath $x$})$とすると
+${\bf r}_{vadv}$を求めるために，$\mbox{\boldmath $r$}=0$でテイラー展開する
+\begin{eqnarray}
+	D(\mbox{\boldmath $r$},\mbox{\boldmath $x$})\approx
+	D(\mbox{\boldmath $r$},\mbox{\boldmath $x$})+\mbox{\boldmath $r$}^{\rm T} 
+	\nabla _{\mbox{\boldmath $r$}}	D(\mbox{\boldmath $r$},\mbox{\boldmath $x$})|_{\mbox{\boldmath $r$}={\bf 0}}
+	+\frac{1}{2}\mbox{\boldmath $r$}^{\rm T}H(\mbox{\boldmath $x$})\mbox{\boldmath $r$}
+\end{eqnarray}
+$\mbox{\boldmath $r$}={\bf 0}$から第三項のみが残る．このとき$\mbox{\boldmath $r$}$は
+$H$を最大化する固有ベクトルにあたるので，べき乗法による計算で求める．またそのときの$H$を差分法から求めらる
+
+
+
+\subsection{実装について}
+kerasを用いて試行錯誤やってみたが自分の力量では実装するまでに至らなかった．\\
+pytorchでの実装がすでになされていたので，今週はそれを動かしつつpytorchの勉強中．
+
+
+
+\section{来週の課題}
+\begin{itemize}
+	\item SSLの実装及び実験
+\end{itemize}
+
+\end{document}
+
+
