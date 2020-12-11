@@ -1,0 +1,40 @@
+@article{sohn2020fixmatch,
+  title={Fixmatch: Simplifying semi-supervised learning with consistency and confidence},
+  author={Sohn, Kihyuk and Berthelot, David and Li, Chun-Liang and Zhang, Zizhao and Carlini, Nicholas and Cubuk, Ekin D and Kurakin, Alex and Zhang, Han and Raffel, Colin},
+  journal={arXiv preprint arXiv:2001.07685},
+  year={2020}
+}
+
+@article{whitley1994genetic,
+  title={A genetic algorithm tutorial},
+  author={Whitley, Darrell},
+  journal={Statistics and computing},
+  volume={4},
+  number={2},
+  pages={65--85},
+  year={1994},
+  publisher={Springer}
+}
+
+@inproceedings{lee2013pseudo,
+  title={Pseudo-label: The simple and efficient semi-supervised learning method for deep neural networks},
+  author={Lee, Dong-Hyun},
+  booktitle={Workshop on challenges in representation learning, ICML},
+  volume={3},
+  number={2},
+  year={2013}
+}
+
+@article{chen2020simple,
+  title={A simple framework for contrastive learning of visual representations},
+  author={Chen, Ting and Kornblith, Simon and Norouzi, Mohammad and Hinton, Geoffrey},
+  journal={arXiv preprint arXiv:2002.05709},
+  year={2020}
+}
+
+@article{wang2019enaet,
+  title={Enaet: Self-trained ensemble autoencoding transformations for semi-supervised learning},
+  author={Wang, Xiao and Kihara, Daisuke and Luo, Jiebo and Qi, Guo-Jun},
+  journal={arXiv preprint arXiv:1911.09265},
+  year={2019}
+}
