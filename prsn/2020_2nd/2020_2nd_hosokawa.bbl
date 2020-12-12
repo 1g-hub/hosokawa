@@ -1,0 +1,28 @@
+\begin{thebibliography}{1}
+
+\bibitem{sohn2020fixmatch}
+Kihyuk Sohn, David Berthelot, Chun-Liang Li, Zizhao Zhang, Nicholas Carlini,
+  Ekin~D Cubuk, Alex Kurakin, Han Zhang, and Colin Raffel.
+\newblock Fixmatch: Simplifying semi-supervised learning with consistency and
+  confidence.
+\newblock {\em arXiv preprint arXiv:2001.07685}, 2020.
+
+\bibitem{lee2013pseudo}
+Dong-Hyun Lee.
+\newblock Pseudo-label: The simple and efficient semi-supervised learning
+  method for deep neural networks.
+\newblock In {\em Workshop on challenges in representation learning, ICML},
+  volume~3, 2013.
+
+\bibitem{whitley1994genetic}
+Darrell Whitley.
+\newblock A genetic algorithm tutorial.
+\newblock {\em Statistics and computing}, 4(2):65--85, 1994.
+
+\bibitem{chen2020simple}
+Ting Chen, Simon Kornblith, Mohammad Norouzi, and Geoffrey Hinton.
+\newblock A simple framework for contrastive learning of visual
+  representations.
+\newblock {\em arXiv preprint arXiv:2002.05709}, 2020.
+
+\end{thebibliography}
