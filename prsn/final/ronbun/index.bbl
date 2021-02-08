@@ -1,0 +1,69 @@
+\begin{thebibliography}{10}
+
+\bibitem{chen2020big}
+Ting Chen, Simon Kornblith, Kevin Swersky, Mohammad Norouzi, and Geoffrey
+  Hinton.
+\newblock Big self-supervised models are strong semi-supervised learners.
+\newblock {\em arXiv preprint arXiv:2006.10029}, 2020.
+
+\bibitem{he2016identity}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
+\newblock Identity mappings in deep residual networks.
+\newblock In {\em European conference on computer vision}, pages 630--645.
+  Springer, 2016.
+
+\bibitem{zhu2005semi}
+Xiaojin~Jerry Zhu.
+\newblock Semi-supervised learning literature survey.
+\newblock 2005.
+
+\bibitem{sohn2020fixmatch}
+Kihyuk Sohn, David Berthelot, Chun-Liang Li, Zizhao Zhang, Nicholas Carlini,
+  Ekin~D Cubuk, Alex Kurakin, Han Zhang, and Colin Raffel.
+\newblock Fixmatch: Simplifying semi-supervised learning with consistency and
+  confidence.
+\newblock {\em arXiv preprint arXiv:2001.07685}, 2020.
+
+\bibitem{lee2013pseudo}
+Dong-Hyun Lee et~al.
+\newblock Pseudo-label: The simple and efficient semi-supervised learning
+  method for deep neural networks.
+\newblock In {\em Workshop on challenges in representation learning, ICML},
+  volume~3, 2013.
+
+\bibitem{chen2020simple}
+Ting Chen, Simon Kornblith, Mohammad Norouzi, and Geoffrey Hinton.
+\newblock A simple framework for contrastive learning of visual
+  representations.
+\newblock In {\em International conference on machine learning}, pages
+  1597--1607. PMLR, 2020.
+
+\bibitem{tian2020makes}
+Yonglong Tian, Chen Sun, Ben Poole, Dilip Krishnan, Cordelia Schmid, and
+  Phillip Isola.
+\newblock What makes for good views for contrastive learning.
+\newblock {\em arXiv preprint arXiv:2005.10243}, 2020.
+
+\bibitem{he2016deep}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
+\newblock Deep residual learning for image recognition.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pages 770--778, 2016.
+
+\bibitem{whitley1994genetic}
+Darrell Whitley.
+\newblock A genetic algorithm tutorial.
+\newblock {\em Statistics and computing}, 4(2):65--85, 1994.
+
+\bibitem{murata1996multi}
+Tadahiko Murata, Hisao Ishibuchi, and Hideo Tanaka.
+\newblock Multi-objective genetic algorithm and its applications to flowshop
+  scheduling.
+\newblock {\em Computers \& industrial engineering}, 30(4):957--968, 1996.
+
+\bibitem{krizhevsky2009learning}
+Alex Krizhevsky, Geoffrey Hinton, et~al.
+\newblock Learning multiple layers of features from tiny images.
+\newblock 2009.
+
+\end{thebibliography}

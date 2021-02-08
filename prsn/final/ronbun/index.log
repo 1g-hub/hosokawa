@@ -1,0 +1,242 @@
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.sjis) (TeX Live 2018/W32TeX) (preloaded format=platex 2020.5.31)  8 FEB 2021 04:36
+entering extended mode
+ restricted \write18 enabled.
+ Source specials enabled.
+ %&-line parsing enabled.
+**index.tex
+(./index.tex
+pLaTeX2e <2018-04-01>+1 (based on LaTeX2e <2018-04-01> patch level 2)
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+(c:/texlive/2018/texmf-dist/tex/platex/base/jarticle.cls
+Document Class: jarticle 2018/02/04 v1.7h Standard pLaTeX class
+\c@@paper=\count83
+(c:/texlive/2018/texmf-dist/tex/platex/base/jsize12.clo
+File: jsize12.clo 2018/02/04 v1.7h Standard pLaTeX file (size option)
+)
+\c@part=\count84
+\c@section=\count85
+\c@subsection=\count86
+\c@subsubsection=\count87
+\c@paragraph=\count88
+\c@subparagraph=\count89
+\c@figure=\count90
+\c@table=\count91
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 614.
+\toclineskip=\dimen118
+\@lnumwidth=\dimen119
+\bibindent=\dimen120
+\heisei=\count92
+)
+(c:/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(c:/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(c:/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvipdfmx.def on input line 99.
+
+(c:/texlive/2018/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+File: dvipdfmx.def 2017/06/24 v5.0g Graphics/color driver for dvipdfmx
+))
+\Gin@req@height=\dimen121
+\Gin@req@width=\dimen122
+)
+(./iepaper.sty
+論文スタイル ver 1.0.4 1997.3.1 (C) L&D SOFT - modified
+\indentlength=\dimen123
+\@Indent=\skip43
+\@tempcntc=\count93
+\nendoad=\count94
+\nendo=\count95
+\mathoffset=\dimen124
+\@tmpindentlen=\dimen125
+) (c:/texlive/2018/texmf-dist/tex/generic/epsf/epsf.sty
+This is `epsf.tex' v2.7.4 <14 February 2011>
+\epsffilein=\read1
+\epsfframemargin=\dimen126
+\epsfframethickness=\dimen127
+\epsfrsize=\dimen128
+\epsftmp=\dimen129
+\epsftsize=\dimen130
+\epsfxsize=\dimen131
+\epsfysize=\dimen132
+\pspoints=\dimen133
+) (./ccaption.sty
+Package: ccaption 2005/03/29 v3.2a Extended captioning and new floats
+\@contcwidth=\skip44
+\@contindw=\skip45
+\abovelegendskip=\skip46
+\belowlegendskip=\skip47
+\c@newflo@tctr=\count96
+) (./index.aux)
+\openout1 = `index.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+
+Underfull \hbox (badness 10000) detected at line 38
+\JY1/mc/m/n/24.88 卒業研究報告書
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 38
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 38
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 38.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 38.
+
+Overfull \hbox (3.1333pt too wide) detected at line 38
+ []$[]$[]
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 38
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 38
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 38
+[] \OT1/cmr/m/n/14.4 32 \JY1/mc/m/n/14.4 年 （ \OT1/cmr/m/n/14.4 2020 \JY1/mc/m
+/n/14.4 年 ） []
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 38
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 38
+\JY1/mc/m/n/14.4 大阪府立大学工学部知能情報工学科
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 38
+ []
+
+
+Overfull \vbox (54.664pt too high) detected at line 38
+ []
+
+[1
+
+]
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 41.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 41.
+ (./index.toc
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 3.
+)
+\tf@toc=\write3
+\openout3 = `index.toc'.
+
+ [1] (./index.lof)
+\tf@lof=\write4
+\openout4 = `index.lof'.
+
+ [2] (./index.lot)
+\tf@lot=\write5
+\openout5 = `index.lot'.
+
+ [3]
+(./doc/introduction.tex) [1] (./doc/relatedwork.tex
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 9.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 9.
+File: ./images/SimCLR.png Graphic file (type bmp)
+<./images/SimCLR.png>
+
+Overfull \hbox (16.46935pt too wide) in paragraph at lines 24--33
+ [][]\OT1/cmr/m/n/12 Simple frame-work for Con-trastive Learn-ing of vi-sual Re
+presentation(SimCLR)$[]$$[]$
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2
+
+]
+File: ./images/ResBlock.jpg Graphic file (type bmp)
+<./images/ResBlock.jpg>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3]) [4] (./doc/experiment.tex) [5
+
+] (./doc/shaji.tex) [6
+
+] (./index.bbl
+
+LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
+(Font)              using `JT1/gt/m/n' instead on input line 7.
+
+
+LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
+(Font)              using `JY1/gt/m/n' instead on input line 7.
+
+[7
+
+]) [8] (./index.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1060 strings out of 493281
+ 12905 string characters out of 6148126
+ 83670 words of memory out of 5000000
+ 5000 multiletter control sequences out of 15000+600000
+ 16651 words of font info for 64 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 25i,8n,22p,302b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on index.dvi (12 pages, 17496 bytes).

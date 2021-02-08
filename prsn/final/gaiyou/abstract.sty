@@ -1,0 +1,180 @@
+% Style for abstracts in Dept. CSIS, Osaka Prefecture University
+% since fiscal year 2015.
+% Prepared by Masakazu Iwamura based on abstract.sty for latex2.09
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{abstract}[2015/11/26 v0.1]
+
+\usepackage{indentfirst} % Indent first paragraphs
+
+\usepackage{titlesec} % Allows customization of titles
+\titleformat{\section}
+            {\titlerule\vspace{.3ex}\normalfont\bfseries}
+            {\thesection.}{.5em}{}[\titlerule\vspace{.8ex}]
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection.}{.5em}{}
+\titleformat{\subsubsection}{\normalfont\bfseries}{\thesubsubsection.}{.5em}{}
+\titlespacing*{\section} {0pt}{1em plus 1em minus 0em}{0pt}
+\titlespacing*{\subsection} {0pt}{.5em plus 1em minus 0em}{0pt}
+\titlespacing*{\subsubsection} {0pt}{.3em plus .5em minus 0em}{0pt}
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyfoot{} % clear all footer fields
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter % Making it possible to handle variables including @
+
+% Language (1 = Japanese, 2 = English)
+\newcount\abst@lang
+\def\setlang#1{\abst@lang=#1}
+% Bachelor or Master (1 = Bachelor, 2 = Master)
+\newcount\abst@borm
+\def\setborm#1{\abst@borm=#1}
+% Fiscal year
+\newcount\abst@fy
+\def\setfy#1{\abst@fy=#1}
+% Group number
+\newcount\abst@gnum
+\def\setgnum#1{\abst@gnum=#1}
+% Presentation order
+\newcount\abst@order
+\def\setorder#1{\abst@order=#1}
+% Increase page number (optional)
+\newcount\abst@pplus \abst@pplus=0
+\def\pplus#1{\abst@pplus=#1}
+
+% Page number calculation
+\def\calcpage{
+  \@tempcnta=\abst@order
+  \advance\@tempcnta by -1
+  \multiply\@tempcnta by \the\abst@borm
+  \advance\@tempcnta by 1
+  \advance\@tempcnta by \the\abst@pplus
+  \setcounter{page}{\the\@tempcnta}
+}
+
+% Text definitions
+\def\maketitle{
+  \calcpage % Page number calculation
+
+  \ifnum \abst@lang=1 % Switch by language
+  %% ----- for Japanese
+
+  \renewcommand{\refname}{参考文献}
+  \renewcommand{\figurename}{図}
+  \renewcommand{\tablename}{表}
+
+  % Title
+  \par
+  \twocolumn[
+    \LARGE\bf\par\vbox to
+    2.8\baselineskip{\centering\@title\par\vfil}
+    \Large\bf\vbox to 1.8\baselineskip{\hfill
+      第~\the\abst@gnum~グループ
+      \hskip1.5em\relax{\Large\bf\@author}\hskip1em\mbox{}\par\vfil}]
+
+  \ifnum \abst@borm=1 % Switch by Bachelor or Master
+  %% --- for Bachelor in Japanese
+
+  % Header
+  \fancyhead[L]{\the\abst@fy 年度 情報工学課程卒業研究論文概要
+    \hfill \the\abst@gnum \ -- \ \thepage}
+  %%%%%%%%%%%%%%%%%% (for past students)
+  %% \fancyhead[L]{\the\abst@fy 年度 知能情報工学科卒業研究論文概要
+  %%   \hfill \the\abst@gnum \ -- \ \thepage}
+  \else
+  %% --- for Master in Japanese
+  % Header
+  \fancyhead[L]{\the\abst@fy 年度 知能情報工学分野修士学位論文概要
+    \hfill \the\abst@gnum \ -- \ \thepage}
+  \fi
+
+  \else
+
+  %% ----- for English
+  % Title
+  \par
+  \twocolumn[
+    \LARGE\bf\par\vbox to
+    2.5\baselineskip{\centering\@title\par\vfil}
+    \Large\bf\vbox to 1.5\baselineskip{\hfill
+      Group~\the\abst@gnum
+      \hskip1.5em\relax{\Large\bf\@author}\hskip1em\mbox{}\par\vfil}]
+
+%%   \renewcommand{\refname}{References}
+%%   \renewcommand{\figurename}{Figure}
+%%   \renewcommand{\tablename}{Table}
+
+  \ifnum \abst@borm=1 % Switch by Bachelor or Master
+  %% --- for Bachelor in English
+
+  % Header
+  \fancyhead[L]{FY~\the\abst@fy~Bachelor's Thesis Abstract at Computer Science Course
+    \hfill \the\abst@gnum \ -- \ \thepage}
+  %%%%%%%%%%%%%%%%%% (for past students)
+%%   \fancyhead[L]{FY~\the\abst@fy~Bachelor's Thesis Abstract at Department of Computer Science and Intelligent Systems
+%%     \hfill \the\abst@gnum \ -- \ \thepage}
+
+  \else
+  %% --- for Master in English
+  \fancyhead[L]{FY~\the\abst@fy~Master's Thesis Abstract at Department of Computer Science and Intelligent Systems
+    \hfill \the\abst@gnum \ -- \ \thepage}
+  \fi
+  \fi}
+
+\makeatother % Canceling the effect of \makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Font sizes
+\def\@normalsize{\@setsize\normalsize{15pt plus 2pt minus 2pt}\xpt\@xpt
+  \let\@listi\@listI} 
+
+\makeatletter
+\def\small{\@setsize\small{11pt}\ixpt\@ixpt
+  \def\@listi{\leftmargin\leftmargini \topsep 2pt plus 3pt minus 2pt
+    \parsep 2pt plus 1pt minus 1pt\itemsep \parsep}}
+\makeatother
+
+% Other parameters
+\parindent=1em
+\textwidth=170mm
+\textheight=262mm
+\topmargin=-10.4mm
+\oddsidemargin=0mm
+\evensidemargin=-10.4mm
+\headwidth\textwidth
+\columnsep=1.5em
+\topskip1\baselineskip
+\headheight1\baselineskip
+\headsep1\baselineskip
+%% \footheight1\baselineskip
+\footskip1\baselineskip
+\advance\textheight-\headheight
+\advance\textheight-\headsep
+%\kanjiskip1pt plus.4pt minus.5pt
+%
+%% \floatsep 3pt plus 2pt minus 0pt
+%% \textfloatsep 5pt plus 2pt minus 0pt
+%% \intextsep 5pt plus 2pt minus 0pt
+%% %% \@maxsep 5pt
+%% \dblfloatsep 3pt plus 2pt minus 0pt
+%% \dbltextfloatsep 5pt plus 2pt minus 0pt
+%% %% \@dblmaxsep 5pt 
+
+% for array
+\arraycolsep 2pt
+\tabcolsep 3pt
+\arrayrulewidth .4pt
+\doublerulesep 2pt 
+\tabbingsep \labelsep 
+
+% for floating objects
+\abovecaptionskip 0pt
+\belowcaptionskip 0pt
+
+% for equations
+\abovedisplayskip 4pt plus 2pt minus 2pt
+\belowdisplayskip 4pt plus 2pt minus 2pt
+\abovedisplayshortskip 2pt plus 1pt minus 1pt
+\belowdisplayshortskip 2pt plus 1pt minus 1pt
