@@ -1,17 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{chen2020big}
-Ting Chen, Simon Kornblith, Kevin Swersky, Mohammad Norouzi, and Geoffrey
-  Hinton.
-\newblock Big self-supervised models are strong semi-supervised learners.
-\newblock {\em arXiv preprint arXiv:2006.10029}, 2020.
-
-\bibitem{he2016identity}
-Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
-\newblock Identity mappings in deep residual networks.
-\newblock In {\em European conference on computer vision}, pages 630--645.
-  Springer, 2016.
-
 \bibitem{zhu2005semi}
 Xiaojin~Jerry Zhu.
 \newblock Semi-supervised learning literature survey.
@@ -31,12 +19,30 @@ Dong-Hyun Lee et~al.
 \newblock In {\em Workshop on challenges in representation learning, ICML},
   volume~3, 2013.
 
+\bibitem{cubuk2020randaugment}
+Ekin~D Cubuk, Barret Zoph, Jonathon Shlens, and Quoc~V Le.
+\newblock Randaugment: Practical automated data augmentation with a reduced
+  search space.
+\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition Workshops}, pages 702--703, 2020.
+
+\bibitem{zhang2019consistency}
+Han Zhang, Zizhao Zhang, Augustus Odena, and Honglak Lee.
+\newblock Consistency regularization for generative adversarial networks.
+\newblock {\em arXiv preprint arXiv:1910.12027}, 2019.
+
 \bibitem{chen2020simple}
 Ting Chen, Simon Kornblith, Mohammad Norouzi, and Geoffrey Hinton.
 \newblock A simple framework for contrastive learning of visual
   representations.
 \newblock In {\em International conference on machine learning}, pages
   1597--1607. PMLR, 2020.
+
+\bibitem{chen2020big}
+Ting Chen, Simon Kornblith, Kevin Swersky, Mohammad Norouzi, and Geoffrey
+  Hinton.
+\newblock Big self-supervised models are strong semi-supervised learners.
+\newblock {\em arXiv preprint arXiv:2006.10029}, 2020.
 
 \bibitem{tian2020makes}
 Yonglong Tian, Chen Sun, Ben Poole, Dilip Krishnan, Cordelia Schmid, and
@@ -49,6 +55,12 @@ Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
 \newblock Deep residual learning for image recognition.
 \newblock In {\em Proceedings of the IEEE conference on computer vision and
   pattern recognition}, pages 770--778, 2016.
+
+\bibitem{he2016identity}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
+\newblock Identity mappings in deep residual networks.
+\newblock In {\em European conference on computer vision}, pages 630--645.
+  Springer, 2016.
 
 \bibitem{whitley1994genetic}
 Darrell Whitley.
@@ -65,5 +77,11 @@ Tadahiko Murata, Hisao Ishibuchi, and Hideo Tanaka.
 Alex Krizhevsky, Geoffrey Hinton, et~al.
 \newblock Learning multiple layers of features from tiny images.
 \newblock 2009.
+
+\bibitem{khosla2020supervised}
+Prannay Khosla, Piotr Teterwak, Chen Wang, Aaron Sarna, Yonglong Tian, Phillip
+  Isola, Aaron Maschinot, Ce~Liu, and Dilip Krishnan.
+\newblock Supervised contrastive learning.
+\newblock {\em arXiv preprint arXiv:2004.11362}, 2020.
 
 \end{thebibliography}

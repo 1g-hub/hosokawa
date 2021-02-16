@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.sjis) (TeX Live 2018/W32TeX) (preloaded format=platex 2020.5.31)  8 FEB 2021 04:36
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.sjis) (TeX Live 2018/W32TeX) (preloaded format=platex 2020.5.31)  14 FEB 2021 18:38
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -31,12 +31,163 @@ LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
 \bibindent=\dimen120
 \heisei=\count92
 )
+(c:/texlive/2018/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+
+(c:/texlive/2018/texmf-dist/tex/latex/tools/array.sty
+Package: array 2018/04/07 v2.4g Tabular extension package (FMi)
+\col@sep=\dimen121
+\ar@mcellbox=\box42
+\extrarowheight=\dimen122
+\NC@list=\toks15
+\extratabsurround=\skip43
+\backup@length=\skip44
+\ar@cellbox=\box43
+)
+(c:/texlive/2018/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(c:/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: dvipdfmx.def on input line 147.
+
+(c:/texlive/2018/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+File: dvipdfmx.def 2017/06/24 v5.0g Graphics/color driver for dvipdfmx
+)
+(c:/texlive/2018/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+))
+\everycr=\toks16
+\minrowclearance=\skip45
+)
+(c:/texlive/2018/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2018/04/01 v1.8r multicolumn formatting (FMi)
+\c@tracingmulticols=\count93
+\mult@box=\box44
+\multicol@leftmargin=\dimen123
+\c@unbalance=\count94
+\c@collectmore=\count95
+\doublecol@number=\count96
+\multicoltolerance=\count97
+\multicolpretolerance=\count98
+\full@width=\dimen124
+\page@free=\dimen125
+\premulticols=\dimen126
+\postmulticols=\dimen127
+\multicolsep=\skip46
+\multicolbaselineskip=\skip47
+\partial@page=\box45
+\last@line=\box46
+\maxbalancingoverflow=\dimen128
+\mult@rightbox=\box47
+\mult@grightbox=\box48
+\mult@gfirstbox=\box49
+\mult@firstbox=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\c@columnbadness=\count99
+\c@finalcolumnbadness=\count100
+\last@try=\dimen129
+\multicolovershoot=\dimen130
+\multicolundershoot=\dimen131
+\mult@nat@firstbox=\box68
+\colbreak@box=\box69
+\mc@col@check@num=\count101
+)
+(c:/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip48
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(c:/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen132
+))
+(c:/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen133
+)
+(c:/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count102
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count103
+\leftroot@=\count104
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count105
+\DOTSCASE@=\count106
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box70
+\strutbox@=\box71
+\big@size=\dimen134
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count107
+\c@MaxMatrixCols=\count108
+\dotsspace@=\muskip10
+\c@parentequation=\count109
+\dspbrk@lvl=\count110
+\tag@help=\toks18
+\row@=\count111
+\column@=\count112
+\maxfields@=\count113
+\andhelp@=\toks19
+\eqnshift@=\dimen135
+\alignsep@=\dimen136
+\tagshift@=\dimen137
+\tagwidth@=\dimen138
+\totwidth@=\dimen139
+\lineht@=\dimen140
+\@envbody=\toks20
+\multlinegap=\skip49
+\multlinetaggap=\skip50
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(c:/texlive/2018/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(c:/texlive/2018/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(c:/texlive/2018/texmf-dist/tex/latex/jknapltx/mathbbol.sty
+Package: mathbbol 1995/01/01
+\symbbold=\mathgroup7
+)
 (c:/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
 (c:/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks15
+\KV@toks@=\toks22
 )
 (c:/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
@@ -48,130 +199,194 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: dvipdfmx.def on input line 99.
-
-(c:/texlive/2018/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
-File: dvipdfmx.def 2017/06/24 v5.0g Graphics/color driver for dvipdfmx
-))
-\Gin@req@height=\dimen121
-\Gin@req@width=\dimen122
+)
+\Gin@req@height=\dimen141
+\Gin@req@width=\dimen142
 )
 (./iepaper.sty
 論文スタイル ver 1.0.4 1997.3.1 (C) L&D SOFT - modified
-\indentlength=\dimen123
-\@Indent=\skip43
-\@tempcntc=\count93
-\nendoad=\count94
-\nendo=\count95
-\mathoffset=\dimen124
-\@tmpindentlen=\dimen125
+\indentlength=\dimen143
+\@Indent=\skip51
+\@tempcntc=\count114
+\nendoad=\count115
+\nendo=\count116
+\mathoffset=\dimen144
+\@tmpindentlen=\dimen145
 ) (c:/texlive/2018/texmf-dist/tex/generic/epsf/epsf.sty
 This is `epsf.tex' v2.7.4 <14 February 2011>
 \epsffilein=\read1
-\epsfframemargin=\dimen126
-\epsfframethickness=\dimen127
-\epsfrsize=\dimen128
-\epsftmp=\dimen129
-\epsftsize=\dimen130
-\epsfxsize=\dimen131
-\epsfysize=\dimen132
-\pspoints=\dimen133
+\epsfframemargin=\dimen146
+\epsfframethickness=\dimen147
+\epsfrsize=\dimen148
+\epsftmp=\dimen149
+\epsftsize=\dimen150
+\epsfxsize=\dimen151
+\epsfysize=\dimen152
+\pspoints=\dimen153
 ) (./ccaption.sty
 Package: ccaption 2005/03/29 v3.2a Extended captioning and new floats
-\@contcwidth=\skip44
-\@contindw=\skip45
-\abovelegendskip=\skip46
-\belowlegendskip=\skip47
-\c@newflo@tctr=\count96
+\@contcwidth=\skip52
+\@contindw=\skip53
+\abovelegendskip=\skip54
+\belowlegendskip=\skip55
+\c@newflo@tctr=\count117
+) (c:/texlive/2018/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
+
+(c:/texlive/2018/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(c:/texlive/2018/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count118
+\calc@Bcount=\count119
+\calc@Adimen=\dimen154
+\calc@Bdimen=\dimen155
+\calc@Askip=\skip56
+\calc@Bskip=\skip57
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count120
+\calc@Cskip=\skip58
+)
+(c:/texlive/2018/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
+
+(c:/texlive/2018/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+
+(c:/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(c:/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+(c:/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)))
+\AM@pagewidth=\dimen156
+\AM@pageheight=\dimen157
+
+(c:/texlive/2018/texmf-dist/tex/latex/pdfpages/ppdvipdfmx.def
+File: ppdvipdfmx.def 2017/10/31 v0.5l Pdfpages driver for dvipdfmx (AM)
+)
+\AM@pagebox=\box72
+\AM@global@opts=\toks23
+\AM@toc@title=\toks24
+\c@AM@survey=\count121
+\AM@templatesizebox=\box73
 ) (./index.aux)
 \openout1 = `index.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+\AtBeginShipoutBox=\box74
 
-Underfull \hbox (badness 10000) detected at line 38
+(c:/texlive/2018/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
+
+(c:/texlive/2018/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+(c:/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+))
+Underfull \hbox (badness 10000) detected at line 49
 \JY1/mc/m/n/24.88 卒業研究報告書
  []
 
 
-Underfull \vbox (badness 10000) detected at line 38
+Underfull \vbox (badness 10000) detected at line 49
  []
 
 
-Underfull \vbox (badness 10000) detected at line 38
+Underfull \vbox (badness 10000) detected at line 49
  []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 38.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 38.
+LaTeX Font Info:    Try loading font information for U+msa on input line 49.
+(c:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 49.
 
-Overfull \hbox (3.1333pt too wide) detected at line 38
+(c:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+bbold on input line 49.
+
+(c:/texlive/2018/texmf-dist/tex/latex/bbold/Ubbold.fd)
+Overfull \hbox (3.1333pt too wide) detected at line 49
  []$[]$[]
  []
 
 
-Underfull \vbox (badness 10000) detected at line 38
+Underfull \vbox (badness 10000) detected at line 49
  []
 
 
-Underfull \vbox (badness 10000) detected at line 38
+Underfull \vbox (badness 10000) detected at line 49
  []
 
 
-Underfull \hbox (badness 10000) detected at line 38
+Underfull \hbox (badness 10000) detected at line 49
 [] \OT1/cmr/m/n/14.4 32 \JY1/mc/m/n/14.4 年 （ \OT1/cmr/m/n/14.4 2020 \JY1/mc/m
 /n/14.4 年 ） []
  []
 
 
-Underfull \vbox (badness 10000) detected at line 38
+Underfull \vbox (badness 10000) detected at line 49
  []
 
 
-Underfull \hbox (badness 10000) detected at line 38
+Underfull \hbox (badness 10000) detected at line 49
 \JY1/mc/m/n/14.4 大阪府立大学工学部知能情報工学科
  []
 
 
-Underfull \vbox (badness 10000) detected at line 38
+Underfull \vbox (badness 10000) detected at line 49
  []
 
 
-Overfull \vbox (54.664pt too high) detected at line 38
+Overfull \vbox (54.664pt too high) detected at line 49
  []
 
 [1
 
 ]
+File: ../abstract/abstract_2020_final_hosokawa.pdf Graphic file (type pdf)
+<../abstract/abstract_2020_final_hosokawa.pdf>
+File: ../abstract/abstract_2020_final_hosokawa.pdf Graphic file (type pdf)
+<../abstract/abstract_2020_final_hosokawa.pdf>
+File: ../abstract/abstract_2020_final_hosokawa.pdf Graphic file (type pdf)
+<../abstract/abstract_2020_final_hosokawa.pdf>
+File: ../abstract/abstract_2020_final_hosokawa.pdf Graphic file (type pdf)
+<../abstract/abstract_2020_final_hosokawa.pdf>
+File: ../abstract/abstract_2020_final_hosokawa.pdf Graphic file (type pdf)
+<../abstract/abstract_2020_final_hosokawa.pdf>
+ [1]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 41.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 55.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 41.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 55.
  (./index.toc
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 3.
 )
 \tf@toc=\write3
 \openout3 = `index.toc'.
@@ -190,53 +405,70 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 9.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 9.
-File: ./images/SimCLR.png Graphic file (type bmp)
-<./images/SimCLR.png>
-
-Overfull \hbox (16.46935pt too wide) in paragraph at lines 24--33
- [][]\OT1/cmr/m/n/12 Simple frame-work for Con-trastive Learn-ing of vi-sual Re
-presentation(SimCLR)$[]$$[]$
- []
+File: ./images/FixMatch.PNG Graphic file (type bmp)
+<./images/FixMatch.PNG>
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2
 
-]
+] [3]
+Overfull \hbox (16.46935pt too wide) in paragraph at lines 93--96
+ [][]\OT1/cmr/m/n/12 Simple frame-work for Con-trastive Learn-ing of vi-sual Re
+presentation(SimCLR)$[]$$[]$
+ []
+
+File: ./images/SimCLR.png Graphic file (type bmp)
+<./images/SimCLR.png>
+[4]
 File: ./images/ResBlock.jpg Graphic file (type bmp)
 <./images/ResBlock.jpg>
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3]) [4] (./doc/experiment.tex) [5
+[5]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 162.
 
-] (./doc/shaji.tex) [6
+ (c:/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 162.
+ [6]) [7]
+(./doc/pro_method.tex) [8
+
+] (./doc/experiment.tex) [9
+
+] (./doc/conclusion.tex)
+[10
+
+] (./doc/shaji.tex) [11
 
 ] (./index.bbl
 
 LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
-(Font)              using `JT1/gt/m/n' instead on input line 7.
+(Font)              using `JT1/gt/m/n' instead on input line 13.
 
 
 LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
-(Font)              using `JY1/gt/m/n' instead on input line 7.
+(Font)              using `JY1/gt/m/n' instead on input line 13.
 
-[7
+[12
 
-]) [8] (./index.aux)
+]) [13] (./index.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 1060 strings out of 493281
- 12905 string characters out of 6148126
- 83670 words of memory out of 5000000
- 5000 multiletter control sequences out of 15000+600000
- 16651 words of font info for 64 fonts, out of 8000000 for 9000
+ 3419 strings out of 493281
+ 45602 string characters out of 6148126
+ 121972 words of memory out of 5000000
+ 7223 multiletter control sequences out of 15000+600000
+ 24369 words of font info for 97 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 25i,8n,22p,302b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,15n,40p,451b,417s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on index.dvi (12 pages, 17496 bytes).
+Output written on index.dvi (18 pages, 35600 bytes).
