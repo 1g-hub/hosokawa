@@ -1,0 +1,96 @@
+\documentclass[12pt,dvipdfmx]{jarticle}
+%\documentstyle[12pt,fleqn,epsf,iepaper,cite]{jarticle}
+%\documentstyle[12pt,iepaper,eclepsf,oddchar]{jarticle}
+
+\usepackage{colortbl}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathbbol}
+\newcommand{\bm}[1]{{\mbox{\boldmath $#1$}}}
+\usepackage{cite}
+
+
+\usepackage[dvipdfm]{graphicx}
+\usepackage{iepaper}
+\usepackage{epsf}
+\usepackage{ccaption}
+\usepackage{pdfpages}
+
+\title{遺伝的アルゴリズムによる機械学習における\\疑似ラベル生成手法の提案}
+\author{細川　岳大}
+\gakuseki{}[B]  %卒論はB，修論はM
+\group{知能情報第 1 グループ}            % 卒論の場合
+\shidou{森 直樹 教授}                          % 卒論の場合
+%\syusa{教授}                            % 修論の場合
+%\hukusa{教授}{教授}
+
+%図番号を「(section番号).(図番号)」とするため
+\makeatletter
+\renewcommand{\thefigure}{%
+	\thesection.\arabic{figure}}
+\@addtoreset{figure}{section}
+\makeatother
+
+\makeatletter
+\renewcommand{\thetable}{%
+	\thesection.\arabic{table}}
+\@addtoreset{table}{section}
+\makeatother
+
+\makeatletter
+\renewcommand{\theequation}{%
+	\thesection.\arabic{equation}}
+\@addtoreset{equation}{section}
+\makeatother
+
+
+\begin{document}
+	\maketitle
+	
+	\includepdf[fitpaper]
+	{../abstract/abstract_2020_final_hosokawa.pdf}
+	\pagenumbering{roman}
+	%%% 目次
+	\tableofcontents
+	\newpage
+	%
+	%% 図一覧
+	\listoffigures
+	\newpage
+	
+	%% 表一覧
+	\listoftables
+	\newpage
+	
+	\pagenumbering{arabic}
+	
+	% 文書開始
+	\input{./doc/introduction}
+	\clearpage
+	%要素技術
+	\input{./doc/relatedwork}
+	\clearpage
+	
+	\input{./doc/pro_method}
+	\clearpage
+	
+	\input{./doc/experiment}
+	\clearpage
+	
+	\input{./doc/conclusion}
+	\clearpage
+	
+	\input{./doc/shaji}
+	
+	% 参考文献
+	\clearpage
+	%\include{./doc/bibliography}
+	%\changeindent{0cm}
+	\bibliographystyle{unsrt}
+	\bibliography{reference}
+	
+	
+	
+\end{document}

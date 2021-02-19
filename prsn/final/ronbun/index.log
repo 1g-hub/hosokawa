@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.sjis) (TeX Live 2018/W32TeX) (preloaded format=platex 2020.5.31)  14 FEB 2021 18:38
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.sjis) (TeX Live 2018/W32TeX) (preloaded format=platex 2020.5.31)  19 FEB 2021 13:09
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -182,6 +182,11 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 Package: mathbbol 1995/01/01
 \symbbold=\mathgroup7
 )
+(c:/texlive/2018/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
 (c:/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -278,22 +283,22 @@ File: ppdvipdfmx.def 2017/10/31 v0.5l Pdfpages driver for dvipdfmx (AM)
 ) (./index.aux)
 \openout1 = `index.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
 \AtBeginShipoutBox=\box74
 
 (c:/texlive/2018/texmf-dist/tex/latex/oberdiek/pdflscape.sty
@@ -305,63 +310,63 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 (c:/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ))
-Underfull \hbox (badness 10000) detected at line 49
+Underfull \hbox (badness 10000) detected at line 50
 \JY1/mc/m/n/24.88 卒業研究報告書
  []
 
 
-Underfull \vbox (badness 10000) detected at line 49
+Underfull \vbox (badness 10000) detected at line 50
  []
 
 
-Underfull \vbox (badness 10000) detected at line 49
+Underfull \vbox (badness 10000) detected at line 50
  []
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 49.
+LaTeX Font Info:    Try loading font information for U+msa on input line 50.
 (c:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 49.
+LaTeX Font Info:    Try loading font information for U+msb on input line 50.
 
 (c:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+bbold on input line 49.
+LaTeX Font Info:    Try loading font information for U+bbold on input line 50.
 
 (c:/texlive/2018/texmf-dist/tex/latex/bbold/Ubbold.fd)
-Overfull \hbox (3.1333pt too wide) detected at line 49
+Overfull \hbox (3.1333pt too wide) detected at line 50
  []$[]$[]
  []
 
 
-Underfull \vbox (badness 10000) detected at line 49
+Underfull \vbox (badness 10000) detected at line 50
  []
 
 
-Underfull \vbox (badness 10000) detected at line 49
+Underfull \vbox (badness 10000) detected at line 50
  []
 
 
-Underfull \hbox (badness 10000) detected at line 49
+Underfull \hbox (badness 10000) detected at line 50
 [] \OT1/cmr/m/n/14.4 32 \JY1/mc/m/n/14.4 年 （ \OT1/cmr/m/n/14.4 2020 \JY1/mc/m
 /n/14.4 年 ） []
  []
 
 
-Underfull \vbox (badness 10000) detected at line 49
+Underfull \vbox (badness 10000) detected at line 50
  []
 
 
-Underfull \hbox (badness 10000) detected at line 49
+Underfull \hbox (badness 10000) detected at line 50
 \JY1/mc/m/n/14.4 大阪府立大学工学部知能情報工学科
  []
 
 
-Underfull \vbox (badness 10000) detected at line 49
+Underfull \vbox (badness 10000) detected at line 50
  []
 
 
-Overfull \vbox (54.664pt too high) detected at line 49
+Overfull \vbox (54.664pt too high) detected at line 50
  []
 
 [1
@@ -379,27 +384,27 @@ File: ../abstract/abstract_2020_final_hosokawa.pdf Graphic file (type pdf)
 <../abstract/abstract_2020_final_hosokawa.pdf>
  [1]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 55.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 56.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 55.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 56.
  (./index.toc
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
-)
+ [1])
 \tf@toc=\write3
 \openout3 = `index.toc'.
 
- [1] (./index.lof)
+ [2] (./index.lof)
 \tf@lof=\write4
 \openout4 = `index.lof'.
 
- [2] (./index.lot)
+ [3] (./index.lot)
 \tf@lot=\write5
 \openout5 = `index.lot'.
 
- [3]
+ [4]
 (./doc/introduction.tex) [1] (./doc/relatedwork.tex
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 9.
@@ -414,7 +419,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [2
 
 ] [3]
-Overfull \hbox (16.46935pt too wide) in paragraph at lines 93--96
+Overfull \hbox (16.46935pt too wide) in paragraph at lines 94--97
  [][]\OT1/cmr/m/n/12 Simple frame-work for Con-trastive Learn-ing of vi-sual Re
 presentation(SimCLR)$[]$$[]$
  []
@@ -428,47 +433,79 @@ File: ./images/ResBlock.jpg Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 162.
+[5] [6]) [7] (./doc/pro_method.tex) [8
 
- (c:/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 162.
- [6]) [7]
-(./doc/pro_method.tex) [8
+] (./doc/experiment.tex
 
-] (./doc/experiment.tex) [9
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-] (./doc/conclusion.tex)
-[10
+[9
 
-] (./doc/shaji.tex) [11
+] [10]
+File: ./images/ex1_res_graph.png Graphic file (type bmp)
+<./images/ex1_res_graph.png>
+
+Overfull \hbox (14.5065pt too wide) in paragraph at lines 93--94
+ [][] 
+ []
+
+File: ./images/ex1_res_img.png Graphic file (type bmp)
+<./images/ex1_res_img.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11
+
+] [12]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[13
+
+] [14] [15]
+File: ./images/ex2_res_graph.png Graphic file (type bmp)
+<./images/ex2_res_graph.png>
+File: ./images/ex2_res_img.png Graphic file (type bmp)
+<./images/ex2_res_img.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [16
+
+] [17] (./doc/conclusion.tex) [18
+
+] (./doc/shaji.tex) [19
 
 ] (./index.bbl
 
 LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
-(Font)              using `JT1/gt/m/n' instead on input line 13.
+(Font)              using `JT1/gt/m/n' instead on input line 8.
 
 
 LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
-(Font)              using `JY1/gt/m/n' instead on input line 13.
+(Font)              using `JY1/gt/m/n' instead on input line 8.
 
-[12
+[20
 
-]) [13] (./index.aux)
+] [21]) [22] (./index.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 3419 strings out of 493281
- 45602 string characters out of 6148126
- 121972 words of memory out of 5000000
- 7223 multiletter control sequences out of 15000+600000
+ 3522 strings out of 493281
+ 47089 string characters out of 6148126
+ 134033 words of memory out of 5000000
+ 7322 multiletter control sequences out of 15000+600000
  24369 words of font info for 97 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  34i,15n,40p,451b,417s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on index.dvi (18 pages, 35600 bytes).
+Output written on index.dvi (28 pages, 69596 bytes).

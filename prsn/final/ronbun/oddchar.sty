@@ -1,0 +1,61 @@
+%==========================================================================
+% oddchar.sty : define the character 'yoshi' for Profs. Nishikawa and Ueda
+%               Dec. 25, 1991   by M. Kitano and T. Sato
+%               Department of Electronics/Electrical Engineering II
+%               Kyoto University, Kyoto 606-01, Japan
+%               E-mail:  kitano@kuee.kyoto-u.ac.jp
+%                        tsato@kuee.kyoto-u.ac.jp
+%==========================================================================
+% following fonts must be available
+\newfont{\oddv}{odd5}
+\newfont{\oddvi}{odd6}
+\newfont{\oddvii}{odd7}
+\newfont{\oddviii}{odd8}
+\newfont{\oddix}{odd9}
+\newfont{\oddx}{odd10}
+\newfont{\oddxi}{odd11}
+\newfont{\oddxii}{odd12}
+\newfont{\oddxiv}{odd14}
+\newfont{\oddxvii}{odd17}
+\newfont{\oddxx}{odd20}
+\newfont{\oddxxv}{odd25}
+%==============================================================
+\edef\Mfiv{\the\fivrm}
+\edef\Msix{\the\sixrm}
+\edef\Msev{\the\sevrm}
+\edef\Megt{\the\egtrm}
+\edef\Mnin{\the\ninrm}
+\edef\Mten{\the\tenrm}
+\edef\Melv{\the\elvrm}
+\edef\Mtwl{\the\twlrm}
+\edef\Mfrtn{\the\frtnrm}
+\edef\Msvtn{\the\svtnrm}
+\edef\Mtwty{\the\twtyrm}
+\edef\Mtwfv{\the\twfvrm}
+%==============================================================
+% \oddchar{mincho}{gothic}
+%   mincho : character for mincho in odd** (n=Nishikawa, u=Ueda)
+%   gothic : character for gothic in odd** (N=Nishikawa, U=Ueda)
+
+\def\oddchar#1#2{\edef\FFname{\the\textfont\z@}%
+\makebox[1zw]{%
+\ifx\FFname\Mfiv\oddv\else
+\ifx\FFname\Msix\oddvi\else
+\ifx\FFname\Msev\oddvii\else
+\ifx\FFname\Megt\oddviii\else
+\ifx\FFname\Mnin\oddix\else
+\ifx\FFname\Mten\oddx\else
+\ifx\FFname\Melv\oddxi\else
+\ifx\FFname\Mtwl\oddxii\else
+\ifx\FFname\Mfrtn\oddxiv\else
+\ifx\FFname\Msvtn\oddxvii\else
+\ifx\FFname\Mtwty\oddxx\else
+\ifx\FFname\Mtwfv\oddxxv\else
+\oddx\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi%
+\ifnum\jfam=\mcfam #1\else #2\fi}%
+}
+%==============================================================
+\def\yoshiN{\oddchar{n}{N}}
+\def\yoshiU{\oddchar{u}{U}}
+\def\hong{\oddchar{h}{H}}
+%==============================================================

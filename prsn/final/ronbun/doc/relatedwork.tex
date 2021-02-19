@@ -8,14 +8,15 @@
 \changeindent{0cm}
 \subsection{半教師あり学習}
 \changeindent{2cm}
-半教師あり学習 (Semi Supervised Learning: SSL)\cite{zhu2005semi} は
+半教師あり学習 (Semi Supervised Learning: SSL)\cite{zhu2005semi,chapelle2009semi} は
 大量のラベルなしデータと少量のラベル付きデータを用いて学習を行う手法である．
+
 
 \changeindent{0cm}
 \subsection{疑似ラベル}
 \changeindent{2cm}
 疑似ラベル (Pseudo Label)\cite{lee2013pseudo} はあるモデルによって予測されるラベルなしデータに対する暫定的なラベルである．
- SSL では疑似ラベルを付与したデータをラベル付きデータに混ぜて学習することで各ラベル同士に対する確率分布を粗密なものにする作用があり，正則化の役割をする．データ数を $N$，あるモデルによる予測確率を $q_b$ ，予測確率 $p,q$に対する Cross Entropy Loss を ${\rm H}(p,q)$ ，閾値を $\tau$ とするとき，(\ref{quadPL})式で与えられる．
+ SSL では疑似ラベルを付与したデータをラベル付きデータに混ぜて学習することで各ラベル同士に対する確率分布を粗密なものにする作用があり，正則化\cite{grandvalet2006entropy}の役割をする．データ数を $N$\ ，あるモデルによる予測確率を $q_b$\ ，予測確率 $p, q$\ に対する Cross Entropy Loss を ${\rm H}(p,q)$\ ，閾値を $\tau$ とするとき，(\ref{quadPL})式で与えられる．
  
  \begin{equation}
  \hat{q}_b = {\rm argmax}(q_b)
@@ -32,7 +33,7 @@
 FixMatch\cite{sohn2020fixmatch}\ は\ SSL\ の一つである．
 図\ref{fig:FixMatch}に\ FixMatch\ の概略図を示す．
 疑似ラベルと Consistency Regularization の二つの正則化手法を
-統合させた手法であり， FixMatch の強変換として使用される．
+統合させた手法である．
 
 
 \begin{figure}[h]
@@ -46,17 +47,17 @@ FixMatch\cite{sohn2020fixmatch}\ は\ SSL\ の一つである．
 \changeindent{0cm}
 \subsubsection{RandAugment}
 \changeindent{2cm}
-RandAugmetn \cite{cubuk2020randaugment} とは，データ拡張手法の一つであり，
+RandAugment \cite{cubuk2020randaugment} とは，データ拡張手法の一つであり，
 チューニングするパラメータは $N$ と $M$ の二種類で，複数あるデータ変換操作のうちランダムに $N$ 個選択し
-変換強度 $M$ で順に適用する手法である．
+変換強度 $M$ で順に適用する手法である．FixMatch では強変換として用いられる．
 
 
 \changeindent{0cm}
 \subsubsection{Consistency Regularization}
 \changeindent{2cm}
 Consistency Regularization \cite{zhang2019consistency} は正則化手法の一つであり，
-画像による変換の前後で予測値が変わらないようなロスを与える．ラベルなしデータを$u_b$，
-$\alpha(\cdot)$を画像変換，$p_{\rm m}(y|x)$を入力$x$に対するモデルの出力とすると，
+画像による変換の前後で予測値が変わらないようなロスを与える．ラベルなしデータを$u_b$\ ，
+ $\alpha(\cdot)$ を画像変換，$p_{\rm m}(y|x)$ を入力 $x$ に対するモデルの出力とすると，
 (\ref{quadCR})式で与えられる．
 
 \begin{equation}
@@ -67,15 +68,15 @@ $\alpha(\cdot)$を画像変換，$p_{\rm m}(y|x)$を入力$x$に対するモデ�
 \changeindent{0cm}
 \subsubsection{更新}
 \changeindent{2cm}
-まず，バッチサイズを $B$としラベル付きデータを${\cal X} = {(x_b, p_b): b \in (1, ... ,B)}$
-としたとき，ラベル付きデータに対するロス${\ell}_{\rm s}$ とすると，(\ref{quadLs})式で与えられる．
+まず，バッチサイズを $B$ としラベル付きデータを ${\cal X} = {(x_b, p_b): b \in (1, ... ,B)}$ 
+としたとき，ラベル付きデータに対するロス ${\ell}_{\rm s}$ とすると，(\ref{quadLs})式で与えられる．
 
 \begin{equation}
 \label{quadLs}
 {\ell}_{\rm s} = \frac{1}{B}\sum^{B}_{b=1}{\rm H}(p_b,p_{\rm m}(y|\alpha(x_b)))
 \end{equation}
 
-また，ラベルなしデータに対するロス${\ell}_{\rm u}$　は，(\ref{quadPL})，(\ref{quadCR})式より，
+また，ラベルなしデータに対するロス ${\ell}_{\rm u}$　は，(\ref{quadPL})，(\ref{quadCR})式より，
 
 \begin{equation}
 \label{quadLu}
@@ -85,14 +86,14 @@ $\alpha(\cdot)$を画像変換，$p_{\rm m}(y|x)$を入力$x$に対するモデ�
 
 となる．このとき，$\mu$ はバッチ内のラベル付きデータに対するラベルなしデータの比率，$\cal A(\cdot)$を強変換である．
 
-従って，ラベルなしデータの重みを$\lambda$	として，バッチ全体のロスは${\ell}_{\rm s}+\lambda {\ell}_{\rm u}$ となる．
+従って，ラベルなしデータの重みを$\lambda$	として，バッチ全体のロスは ${\ell}_{\rm s}+\lambda {\ell}_{\rm u}$ となる．
 
 \changeindent{0cm}
 \subsection{SimCLR}
 \changeindent{2cm}
 Simple framework for Contrastive Learning of visual Representation(SimCLR)\cite{chen2020simple}は SSL の一つである．
-図\ref{fig:SimCLR}に概略図を示す．モデルの構造は Encoder，Projection Head，Classsifer
-から構成されており， Encoder と Projection Head に対して，全データを用いて Contrastive Learning によって学習する．次に学習済みの Encoder と Classifer に対して，ラベル付きデータを用いて Classfier の学習を行う．最後にモデルの蒸留を行うことで最終的なモデルを得る．
+図\ref{fig:SimCLR}に概略図を示す．モデルの構造は Encoder，Projection Head，Classsifier
+から構成されており， Encoder と Projection Head に対して，全データを用いて Contrastive Learning によって学習する．次に学習済みの Encoder と Classifier に対して，ラベル付きデータを用いて Classifier の学習を行う．最後にモデルの蒸留\cite{hinton2015distilling}を行うことで最終的なモデルを得る．
 
 \begin{figure}[h]
 	\begin{center}
@@ -106,12 +107,12 @@ Simple framework for Contrastive Learning of visual Representation(SimCLR)\cite{
 \subsubsection{Cotrastive Learning}
 \changeindent{2cm}
 Contrastive Learning (CL)\cite{tian2020makes} とは特徴表現を獲得するための
-自己教師あり学習のひとつである．
+自己教師あり学習\cite{doersch2017multi}のひとつである．
 ある画像変換をした画像のペアについて元画像が一致するか否かを識別するタスクであり，
 一つの画像から得られる特徴表現が画像変換によって
 画像の持つ意味が大きく変化させない変形を獲得することができる．
 具体的な方法について，バッチ内の画像枚数を $N$ 枚とすると， Data Augmentation によって2倍に増やしたとき，
-各画像に対して正例は1枚，負例は $2(N-1)$ 枚となる．このとき特徴ベクトル間の距離として cos 類似度を用い，(\ref{sim})式となる．また，正例との距離を小さくかつ，負例との距離を大きくするために正例のペア $(z_i,z_j)$ に対するロス $\ell(i, j)$ は(\ref{quad_posl})式で表され，
+各画像に対して正例は1枚，負例は $2(N-1)$ 枚となる．このとき特徴ベクトル間の距離として cos 類似度を用い，(\ref{sim})式となる．また，正例との距離を小さくかつ，負例との距離を大きくするために正例のペア $({\bm z}_i,{\bm z}_j)$ に対するロス $\ell(i, j)$ は(\ref{quad_posl})式で表され，
 バッチ全体のロス$\mathcal L$は(\ref{quad_L})式で表される．
 
 \begin{equation}
@@ -134,8 +135,8 @@ Contrastive Learning (CL)\cite{tian2020makes} とは特徴表現を獲得する�
 \changeindent{0cm}
 \subsection{ResNet}
 \changeindent{2cm}
-Residual Network (: ResNet)\cite{he2016deep} は　Deep Neural Network (: DNN) のモデルの一つであり，
- DNNにおいて層を深くすることで発生する劣化問題及び勾配消失問題を解消するために残差についての学習を行うことを目的としている．図\ref{fig:ResBlock}に ResNet の構成要素である Residual Block の構造を示す．
+Residual Network (: ResNet)\cite{he2016deep} は　Deep Neural Network (: DNN)\cite{larochelle2009exploring} のモデルの一つであり，
+ DNNにおいて層を深くすることで発生する劣化問題及び勾配消失問題\cite{hochreiter1998vanishing}を解消するために残差についての学習を行うモデルである．図\ref{fig:ResBlock}に ResNet の構成要素である Residual Block の構造を示す．
 2層の畳み込み層とショートカットの足し合わせた構造となっている．
 
 \begin{figure}[h]
@@ -156,25 +157,24 @@ Residual Network (: ResNet)\cite{he2016deep} は　Deep Neural Network (: DNN) �
 \changeindent{0cm}
 \subsubsection{選択}
 \changeindent{2cm}
-選択は自然淘汰をもとにした操作であり，個体の適応度にもとづき次世代に残される個体を選ぶものである．
+選択\cite{blickle1996comparison}は自然淘汰をもとにした操作であり，個体の適応度にもとづき次世代に残される個体を選ぶものである．
 以下のものがあげられる．
 \begin{itemize}
-	\item エリート選択\cite{murata1996multi} : 世代における適応度の最も高い個体を
-	他の操作を行わず次世代に残す手法である．
-	\item トーナメント選択 : 個体群からランダムに決められた数(: トーナメントサイズ)取り出し，
+	\setlength{\leftskip}{4.5cm}
+	\item[エリート選択\cite{murata1996multi} : ]世代における適応度の最も高い個体を他の操作を行わず次世代に残す手法である．
+	\item[トーナメント選択 : ]個体群からランダムに決められた数(: トーナメントサイズ)取り出し，
 	その中で適応度の最も高い個体を選択する手法である．
 \end{itemize}
 
 \changeindent{0cm}
 \subsubsection{交叉}
 \changeindent{2cm}
-交叉は生物の交配をもとにした操作であり，二つの個体から新たな2つのこ個体を生成するものである．
+交叉は生物の交配をもとにした操作であり，2つの個体から新たな2つの個体を生成するものである．
 以下のものがあげられる．
 \begin{itemize}
-	\item エリート選択\cite{murata1996multi} : 世代における適応度の最も高い個体を
-	他の操作を行わず次世代に残す手法である．
-	\item トーナメント選択 : 個体群からランダムに決められた数(: トーナメントサイズ)取り出し，
-	その中で適応度の最も高い個体を選択する手法である．
+	\setlength{\leftskip}{3cm}
+	\item[二点交叉 : ]対象となる2つの個体を同じ遺伝子座で3つに分割を行い，いずれかを入れ替える手法である．
+	\item[一様交叉 : ]対象となる2つの個体についてある遺伝子座ごとにある確率で入れ替えを行う手法である．
 \end{itemize}
 
 \changeindent{0cm}

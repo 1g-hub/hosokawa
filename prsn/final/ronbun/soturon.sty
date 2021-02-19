@@ -1,0 +1,590 @@
+% iepaper.sty - 1996年度大阪府立大学情報工学科修士及び卒業論文用スタイ
+%               ルファイル
+% $ID: iepaper.sty ver 1.0.4 1997.3.1 (C) L&D SOFT $
+%
+% このファイルの最後にドキュメントがついています．
+%
+\typeout{論文スタイル ver 1.0.4 1997.3.1 (C) L&D SOFT}
+
+\renewcommand{\baselinestretch}{1.25}
+\oddsidemargin-1in\advance\oddsidemargin30mm
+\evensidemargin\oddsidemargin
+\headheight1\baselineskip\advance\headheight3pt
+\headsep1\baselineskip
+\topskip1\baselineskip
+\footheight1\baselineskip\advance\footheight2pt
+\footskip\footheight
+\topmargin-1in\advance\topmargin31mm%30mm
+\advance\topmargin-\headheight
+\textwidth160mm
+\textheight239mm%237mm
+\advance\textheight-\headsep\advance\textheight-\footskip
+\parindent1zw
+
+\parsep\baselineskip
+\itemsep0pt
+\topsep0pt
+
+\def\changecontentsname#1{\def\contentsname{#1}}
+
+\def\katu{\@setsize\small{15.4pt}\ixpt\@ixpt
+  \abovedisplayskip8.5pt plus3pt minus4pt\belowdisplayskip\abovedisplayskip
+  \abovedisplayshortskip\z@ plus2pt\belowdisplayshortskip4pt plus2pt minus2pt
+  \def\@listi{\leftmargin\leftmargini\topsep4pt plus2pt minus2pt\parsep2pt
+  plus1pt minus1pt\itemsep \parsep}}
+
+% \@trivlistの調整
+\def\@trivlist{\@topsepadd\topsep
+  \if@noskipsec \leavevmode \fi
+  \ifvmode \advance\@topsepadd\partopsep \else \unskip\par\fi
+  \if@inlabel \@noparitemtrue \@noparlisttrue
+    \else \@noparlistfalse \@topsep\@topsepadd \fi
+    \advance\@topsep \parskip
+  \leftskip\@Indent\rightskip\@rightskip \parfillskip\@flushglue
+  \@setpar{\if@newlist\else{\@@par}\fi}%
+  \global\@newlisttrue \@outerparskip\parskip}
+
+% セクションコマンド等
+\newdimen\indentlength \indentlength5zw
+\def\changeindent#1{\indentlength#1\relax\@iepstyle}
+\newskip\@Indent
+\def\@iepstyle{\@Indent\indentlength plus.8pt minus.7pt%
+  \global\leftskip\@Indent}
+\def\@iepcounter{\setcounter{figure}{0}\setcounter{table}{0}}
+
+\def\section{\@iepstyle\@iepcounter
+ \@startsection{section}{1}{-\@Indent}
+ {\baselineskip}{\baselineskip}{\Large\bf \mark{}}}
+\def\subsection{\@startsection{subsection}{2}{-\@Indent}
+{\baselineskip}{\baselineskip}{\large\bf}}
+\def\subsubsection{\@startsection{subsubsection}{3}{-\@Indent}
+{\baselineskip}{\baselineskip}{\normalsize\bf}}
+% \def\subsubsubsection{\@startsection{subsubsubsection}{3}{-\@Indent}
+%   {\baselineskip}{\baselineskip}{\normalsize\bf}}
+% \newcounter{subsubsubsection}[subsubsection]
+% \def\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+% \def\l@subsubsubsection{\@dottedtocline{3}{3.8em}{3.2em}}
+% \setcounter{subsubsubsection}{0}
+\def\paragraph{\@startsection{paragraph}{4}{\z@}
+{\baselineskip}{-1em}{\normalsize\bf}}
+\def\subparagraph{\@startsection{subparagraph}{4}{\parindent}
+{\baselineskip}{-1em}{\normalsize\bf}}
+% 謝辞
+\def\acknowledgements{\section*{\@acknowledgename}%
+  \addcontentsline{toc}{section}{\@acknowledgename}\mark{}}
+\def\acknowledge{\acknowledgements}
+\def\acknowledgename#1{\def\@acknowledgename{#1}}\acknowledgename{謝辞}
+% 付録
+\newif\if@appendix \@appendixfalse
+\def\appendix{\par
+ \setcounter{section}{0}
+ \setcounter{subsection}{0}
+ \setcounter{subsubsection}{0}
+ \def\thesection{\Alph{section}}
+ \def\theequation{\@Alph{\c@section}.\@arabic{\c@equation}}
+ \addcontentsline{toc}{section}{付録}
+ \@appendixtrue
+ \def\@sect##1##2##3##4##5##6[##7]##8{\ifnum ##2>\c@secnumdepth
+     \def\@svsec{}\else 
+     \refstepcounter{##1}\edef\@svsec{\csname the##1\endcsname\hskip 1em }\fi
+     \@tempskipa ##5\relax
+      \ifdim \@tempskipa>\z@ 
+        \begingroup ##6\relax
+          \@hangfrom{\hskip ##3\relax\ifnum##2=1 付録\fi\@svsec}{\interlinepenalty \@M ##8\par}%
+        \endgroup
+       \csname ##1mark\endcsname{##7}\addcontentsline
+         {toc}{##1}{\ifnum ##2>\c@secnumdepth \else
+                      \protect\numberline{\csname the##1\endcsname}\fi
+                    ##7}\else
+        \def\@svsechd{##6\hskip ##3\@svsec ##8\csname ##1mark\endcsname
+                      {##7}\addcontentsline
+                           {toc}{##1}{\ifnum ##2>\c@secnumdepth \else
+                             \protect\numberline{\csname the##1\endcsname}\fi
+                       ##7}}\fi
+     \@xsect{##5}}
+}
+% 参考文献
+\newif\if@squarebracket\@squarebrackettrue
+\def\roundbracket{\@squarebracketfalse}
+\def\refname#1{\def\@refname{#1}}\refname{参考文献}
+\def\thebibliography#1{\section*{\@refname}\@mkboth{\@refname}{\@refname}
+ \addcontentsline{toc}{section}{\@refname}
+  \list{\if@squarebracket[\arabic{enumi}]\else(\arabic{enumi})\fi}%
+    {\settowidth\labelwidth{\if@squarebracket[#1]\else(#1)\fi}
+      \leftmargin\labelwidth\advance\leftmargin\labelsep\usecounter{enumi}}
+ \def\newblock{\hskip .11em plus .33em minus .07em}
+ \sloppy\clubpenalty4000\widowpenalty4000
+ \sfcode`\.=1000\relax}
+
+\def\@cite#1#2{$^{\mbox{\the\scriptfont0#1}}$}
+
+\newcount\@tempcntc
+\def\@citex[#1]#2{\if@filesw\immediate\write\@auxout{\string\citation{#2}}\fi%
+  \@tempcnta\z@\@tempcntb\m@ne%
+  \if@squarebracket\def\@citea{[}\else\def\@citea{(}\fi
+  \@cite{\@for\@citeb:=#2\do
+    {\@ifundefined{b@\@citeb}{\@citeo\@tempcntb\m@ne\@citea
+         \if@squarebracket\def\@citea{],[}\else\def\@citea{),(}\fi{\bf ?}
+         \@warning{Citation `\@citeb' on page \thepage \space undefined}}%
+    {\setbox\z@\hbox{\global\@tempcntc0\csname b@\@citeb\endcsname\relax}%
+     \ifnum\@tempcntc=\z@ \@citeo\@tempcntb\m@ne
+       \@citea\if@squarebracket\def\@citea{],[}\else\def\@citea{),(}\fi
+       \hbox{\csname b@\@citeb\endcsname}%
+     \else
+      \advance\@tempcntb\@ne
+      \ifnum\@tempcntb=\@tempcntc
+      \else\advance\@tempcntb\m@ne\@citeo
+      \@tempcnta\@tempcntc\@tempcntb\@tempcntc\fi\fi}}\@citeo}{#1}%
+      $^{\mkern -1mu\if@squarebracket{]}\else{)}\fi}$}
+\def\@citeo{\ifnum\@tempcnta>\@tempcntb\else\@citea
+  \if@squarebracket\def\@citea{],[}\else\def\@citea{),(}\fi
+  \ifnum\@tempcnta=\@tempcntb\the\@tempcnta\else
+   {\advance\@tempcnta\@ne\ifnum\@tempcnta=\@tempcntb\else
+     \if@squarebracket\def\@citea{]--[}\else\def\@citea{)--(}\fi\fi
+    \advance\@tempcnta\m@ne\the\@tempcnta\@citea\the\@tempcntb}\fi\fi}
+
+% ヘッディングスの設定
+\newif\if@master\@mastertrue
+
+\def\sectionmarkfont#1{\def\@sectmarkfont{\noexpand #1}}
+\sectionmarkfont{\normalsize}
+
+\newif\if@head@upper \@head@uppertrue%柱の英語を大文字に
+\def\headnoupper{\@head@upperfalse}
+
+\def\ps@iepheadings{\let\@mkboth\markboth
+  \def\@oddhead{\vbox{\hbox to\textwidth{\rightmark\mbox{}\hfil\rm\thepage}%
+    \vskip2pt\hrule width\textwidth height1pt}}%
+  \def\@evenhead{\vbox{\hbox to\textwidth{\rm\thepage\hfil\rightmark}%
+    \vskip2pt\hrule width\textwidth height1pt}}%
+  \def\@oddfoot{\vbox{\hrule width\textwidth height1pt\vskip1pt%
+    \hbox to\textwidth{\hfil\katu%
+      \if@master 大阪府立大学大学院工学研究科電気・情報系専攻知能情報工学分野\else
+      大阪府立大学工学部知能情報工学科\fi}}}%
+  \def\@evenfoot{\vbox{\hrule width\textwidth height1pt\vskip1pt%
+    \hbox to\textwidth{\katu%
+      \if@master 大阪府立大学大学院工学研究科電気・情報系専攻知能情報工学分野\else
+      大阪府立大学工学部知能情報工学科\fi}}}%
+  \def\sectionmark##1{\markright{{\@sectmarkfont%
+    \ifnum\c@secnumdepth>\z@\if@appendix 付録\fi\thesection\hskip1em\relax\fi
+    \if@head@upper\uppercase{##1}\else##1\fi}}}}
+\pagestyle{iepheadings}
+
+% 中表紙
+\def\syusa#1{\def\@syusa{#1}}\syusa{}%主査
+\def\hukusa#1#2#3{\def\@hukusai{#1}\def\@hukusaii{#2}\def\@hukusaiii{#3}}\hukusa{}{}{}%副査
+
+\def\group#1{\def\@group{#1}}\group{} %研究グループ
+\def\shidou#1{\def\@shidou{#1}}\shidou{} %指導教官
+
+% 学籍番号
+\def\gakuseki#1{\def\@gakuseki{#1}\@ifnextchar[{\@ismaster}{\@ismaster[M]}}
+\def\@ismaster[#1]{\if#1M\@mastertrue\else\if#1B\@masterfalse\fi\fi}
+
+\newcount\nendoad\nendoad\year
+\ifcase\number\month\or\advance\nendoad-1\or\advance\nendoad-1\or\advance\nendoad-1\fi
+\newcount\nendo\nendo\nendoad\advance\nendo-1988
+
+\def\maketitle{\begin{titlepage}
+  \if@master \vbox to 210mm{
+  \large\vspace*{20mm}
+  \vbox to9mm{\hskip33mm\hbox to 70mm{\Huge 修士学位論文}}\par
+  \hskip0mm\vbox{\hrule height1pt width139mm}\par
+  \vskip1mm\vbox to 5mm{\hskip54mm\hbox to 30mm{題\hfill 目}}\par\vskip-3mm
+  \hskip0mm\vbox to 24mm{\vfil\hbox to 139mm{
+    \parbox{139mm}{\LARGE\centering\baselineskip25pt\@title}}\par\vskip1pt}
+  \par\vskip-5mm\hskip0mm\vbox{\hrule height1pt width139mm}\vskip12mm
+  \hskip22mm\vbox to 5mm{\hbox to 83mm{ 主~査\hfil\@syusa\hfil}%
+    \hrule height1pt width83mm}\par\vskip6mm
+  \hskip22mm\vbox to 5mm{\hbox to 83mm{ 副~査\hfil\@hukusai\hfil}%
+    \hrule height1pt width83mm}\par\vskip6mm
+  \hskip22mm\vbox to 5mm{\hbox to 83mm{ 副~査\hfil\@hukusaii\hfil}%
+    \hrule height1pt width83mm}\par\vskip6mm
+  \hskip22mm\vbox to 5mm{\hbox to 83mm{ 副~査\hfil\@hukusaiii\hfil}%
+    \hrule height1pt width83mm}\par\vskip29mm
+  \hskip24mm\vbox{\hbox to 83mm{%
+      \mbox{平~成}\ifnum\nendo=0 元\else\number\nendo\fi 年
+      （ \number\nendoad 年）\mbox{度~修~了}}}\par\vskip10mm
+  \hskip5mm\vbox to 5mm{\hbox to132mm{%
+      \hbox to55mm{（No. \hfil\@gakuseki\hfil ）}\hfil
+    \@author\hfil}}\par\vskip-5mm
+  \hskip4mm\vbox{\hrule height1pt width132mm}
+  \vskip19mm
+  \hskip23mm\vbox to12mm{\hbox to 84mm{大阪府立大学大学院工学研究科}\vskip-2mm
+    \hbox to 84mm{電気・情報系専攻 知能情報工学分野}}
+}
+\else %B4用 Masaki Onishi
+\vbox to 210mm{
+  \large\vspace*{15mm}
+  \vbox to9mm{\hskip27mm\hbox to 82mm{\Huge 卒業研究報告書}}\par
+  \hskip0mm\vbox{\hrule height1pt width139mm}\par
+  \vskip1mm\vbox to 5mm{\hskip54mm\hbox to 30mm{題\hfill 目}}\par\vskip-3mm
+  \hskip0mm\vbox to 24mm{\vfil\hbox to 139mm{
+    \parbox{139mm}{\LARGE\centering\baselineskip25pt\@title}}\par\vskip1pt}
+  \par\vskip-5mm\hskip0mm\vbox{\hrule height1pt width139mm}\vskip42mm
+  \hskip22mm\vbox to 5mm{\hbox to 97mm{ 研~究~グ~ル~ー~プ\hfil\@group\hfil}%
+    \hrule height1pt width97mm}\par\vskip6mm
+  \hskip22mm\vbox to 5mm{\hbox to 97mm{ 指~導~教~員\hfil\@shidou\hfil}%
+    \hrule height1pt width97mm}\par\vskip24mm
+  \hskip21mm\vbox{\hbox to 89mm{%
+      \mbox{平~成}\ifnum\nendo=0 元\else\number\nendo\fi 年
+      （ \number\nendoad 年）\mbox{度~卒~業~}}}\par\vskip10mm
+  \hskip5mm\vbox to 5mm{\hbox to132mm{%
+      \hbox to60mm{（No. \hfil\@gakuseki\hfil ）}\hfil
+    \@author\hfil}}\par\vskip-5mm
+  \hskip4mm\vbox{\hrule height1pt width132mm}
+  \vskip24mm
+  \hskip22mm\vbox to12mm{\hbox to 97mm{大阪府立大学工学部知能情報工学科}}
+}\fi
+\end{titlepage}
+\setcounter{footnote}{0}       % Footnotes start at zero again.
+\let\thanks\relax
+\gdef\@thanks{}\gdef\@author{}\gdef\@title{}\let\maketitle\relax}
+
+% 図表の設定
+\def\engfigurename{Fig.\ }
+\def\engtablename{Table }
+\def\figurename{図 }
+\def\tablename{表 }
+
+\def\fnum@figure@e{\engfigurename \thesection .\thefigure\hskip 5pt}
+\def\fnum@figure@j{\figurename \thesection .\thefigure\hskip 5pt}
+\def\fnum@table@e{\engtablename \thesection .\thetable\hskip 5pt}
+\def\fnum@table@j{\tablename \thesection .\thetable\hskip 5pt}
+
+\def\p@figure{\thesection .}
+\def\p@table{\thesection .}
+\def\p@equation{}
+
+\@addtoreset{figure}{section}
+\@addtoreset{table}{section}
+\@addtoreset{equation}{section}
+\def\theequation{\@arabic{\c@section}.\@arabic{\c@equation}}
+
+\long\def\@caption#1[#2]#3#4{\par\addcontentsline{\csname
+  ext@#1\endcsname}{#1}{\protect\numberline{\thesection.\csname
+  the#1\endcsname}{\ignorespaces #2}}\begingroup
+        \@parboxrestore
+        \normalsize
+        \@makecaption{#1}{\ignorespaces #3}{\ignorespaces #4}\par
+  \endgroup}
+
+\long\def\@makecaption#1#2#3{\
+ \vskip 10pt
+ \setbox\@tempboxa\hbox{#2}
+ \@tempdima\wd\@tempboxa
+ \setbox\@tempboxa\hbox{{\csname fnum@#1@j\endcsname} #2}
+ \ifdim \@tempdima >\z@
+ \ifdim \wd\@tempboxa >\hsize \unhbox\@tempboxa\par \else%
+ \hbox to\hsize{\hfil\box\@tempboxa\hfil}
+ \fi\fi
+ \setbox\@tempboxa\hbox{#3}
+ \@tempdima\wd\@tempboxa
+ \setbox\@tempboxa\hbox{{\csname fnum@#1@e\endcsname} #3}
+ \ifdim \@tempdima >\z@
+ \ifdim \wd\@tempboxa >\hsize \unhbox\@tempboxa\par \else%
+ \hbox to\hsize{\hfil\box\@tempboxa\hfil}
+ \fi\fi}
+
+% 数式環境の再定義
+\newdimen\mathoffset \mathoffset\indentlength\divide\mathoffset by2
+\def\@offsetmath#1{\@tempdima#1\ifdim\@tempdima>\z@\hskip\@tempdima minus1pt\fi}
+\def\@mathlspace{\@offsetmath\mathoffset}
+\def\@mathrspace{\@offsetmath{-\mathoffset}}
+
+\def\[{\relax\ifmmode\@badmath\else 
+         \ifvmode \nointerlineskip \makebox[.6\linewidth]\fi$$\openup-1\jot
+         \@mathlspace\relax %%$$ BRACE MATCH HACK
+         \fi}
+
+\def\]{\relax\ifmmode\ifinner\@badmath\else\@mathrspace $$\fi%%$$ BRACE MATCH HACK
+        \else \@badmath \fi\ignorespaces}
+
+\def\equation{\relax
+ $$\openup-1\jot\@mathlspace \relax % $$ BRACE MATCHING HACK
+ \refstepcounter{equation}}
+
+\def\endequation{\@mathrspace\eqno \@eqnnum % $$ BRACE MATCHING HACK
+$$\global\@ignoretrue}
+
+\def\eqnarray{\stepcounter{equation}\let\@currentlabel=\theequation
+\global\@eqnswtrue
+\global\@eqcnt\z@\tabskip\@centering\let\\=\@eqncr
+$$\openup-1\jot\halign to \displaywidth\bgroup\@eqnsel\@mathlspace\hskip\@centering
+  $\displaystyle\tabskip\z@{##}$&\global\@eqcnt\@ne
+  \hskip 2\arraycolsep \hfil${##}$\hfil
+  &\global\@eqcnt\tw@ \hskip 2\arraycolsep $\displaystyle\tabskip\z@{##}$\hfil
+   \tabskip\@centering&\llap{##}\tabskip\z@\cr}
+
+\def\endeqnarray{\@mathrspace\@@eqncr\egroup
+      \global\advance\c@equation\m@ne$$\global\@ignoretrue}
+
+\long\def\wholepage#1{\vbox to .9\textheight{\vfill #1\vfill}}
+
+% 字下げ処理を行うfigure, table, center環境の設定
+\newdimen\@tmpindentlen
+
+\def\ifigure{\@ifnextchar [{\@ifigure}{\@ifig}}
+
+\def\@ifig{\@tmpindentlen\textwidth \advance\@tmpindentlen by-\indentlength%
+\begin{figure}\hskip\indentlength\begin{minipage}{\@tmpindentlen}}
+\def\endifigure{\end{minipage}\end{figure}}
+
+\def\@ifigure[#1]{%
+\@tmpindentlen\textwidth \advance\@tmpindentlen by-\indentlength%
+\begin{figure}[#1]\hskip\indentlength\begin{minipage}{\@tmpindentlen}}
+\def\endifigure{\end{minipage}\end{figure}}
+
+\def\itable{\@ifnextchar [{\@itable}{\@itab}}
+
+\def\@itab{\@tmpindentlen\textwidth \advance\@tmpindentlen by-\indentlength%
+\begin{table}\hskip\indentlength\begin{minipage}{\@tmpindentlen}}
+\def\enditable{\end{minipage}\end{table}}
+
+\def\@itable[#1]{%
+\@tmpindentlen\textwidth \advance\@tmpindentlen by-\indentlength%
+\begin{table}[#1]\hskip\indentlength\begin{minipage}{\@tmpindentlen}}
+\def\enditable{\end{minipage}\end{table}}
+
+\def\icenter{\@tmpindentlen\textwidth \advance\@tmpindentlen by-\indentlength%
+\begin{minipage}{\@tmpindentlen}\leftmargin\indentlength\begin{center}}
+\def\endicenter{\end{center}\end{minipage}}
+
+\endinput
+%%%%%[ README 必ずお読み下さい ]%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+○  はじめに
+        平成8年度大阪府立大学工学部情報工学科修士及び卒業論文を執筆す
+      るためのものです．ASCII版LaTeX(ver 2.09)用であり，NTT版LaTeXでの
+      動作の保証はありません．
+
+○  使用許諾条件について
+        以下の事項に該当する者を除き，本スタイルファイルの使用を許諾し
+      ます．
+          ・この文章(README)を読まない者．
+          ・この文章の内容を理解できない者．
+          ・使用許諾条件などこの文章に書かれている条件に合意できない者．
+          ・使用許諾条件などこの文章に書かれている内容を守れない又は守
+            らない者．
+          ・著作者に無断で本スタイルファイルを用いて金銭的利益を得よう
+            とする者．
+          ・フリーウェア != PDSを理解していない者．
+          ・このファイルを無断複製し使用する者．
+
+○  著作権について
+      ・本スタイルファイルは，フリーウェアであり，著作権を放棄しており
+        ませんので，誤解なきようお願いします．
+      ・本スタイルファイルの著作権は森 隆司が保有します．
+      ・本スタイルファイルの卒論用中表紙の著作権は大西 正輝が保有します．
+      ・本スタイルファイル及びこの文章中の著作権表示は消さないで下さい．
+
+○  再配布について
+        本スタイルファイルの再配布を行う場合は，次の事項を必ず守るよう
+      よろしくお願いします．
+          ・本スタイルファイルの配布を行う前に，配布者が著作権者に連絡
+            すること．
+          ・この文章を含む全てのファイル一式をそのまま同梱した形で配布
+            すること．
+          ・本スタイルファイルの改変は自由に行って頂いて構いませんが，
+            改変したスタイルファイルを配布する場合には，改変者，改変場
+            所などが明確にわかるようにして下さい．そして，この文章を改
+            変せずに必ず添付し，配布を行う前に配布者が著作権者に必ず連
+            絡して下さい．
+
+○  使用上の注意
+        本スタイルファイルは無保証です．本スタイルファイルの使用によっ
+      て生じた如何なるトラブル，損害の責も著作権者は負わないものとしま
+      す．必ずご自身の判断、責任のもとにご使用下さい．
+        バグレポート，ご意見，ご感想，わからないことがありましたら，作
+      者までお知らせ下さい．
+
+○  スタイルファイルの使用法
+        まず，スタイルファイルをパスの通っているディレクトリに置きます．
+      次に，TeXファイルの書き方の一例を示します．
+
+          %%%%%  読み込むスタイルファイルを指定します．
+          %%%%%  他に必要なスタイルファイルは各自で指定してください．
+          %%%%%  但し，a4j, twocolumn, twoside等の指定はしないで下さい．
+          \documentstyle[12pt,iepaper]{jarticle}
+          \title{論文題目}
+          \author{氏名}
+          \gakuseki{学籍番号}[B]  %\
+          \group{}                %| 卒論の場合.
+          \shidou{}               %/
+          \gakuseki{学籍番号}[M]  % \
+          \syusa{}                % | 修論の場合．
+          \hukusa{}{}             % /
+          \begin{document}
+          \maketitle
+          \pagenumbering{roman}
+          \tableofcontents
+          \newpage
+          \pagenumbering{arabic}
+          \section{}
+          %%%%%
+          %%%%%  残念ながら，本文まで自動作成はできません．
+          %%%%%  本文は各自でお書き下さい．
+          %%%%%
+          \acknowledgements
+          \begin{thebibliography}
+          \bibitem
+          \end{thebibliography}
+          \appendix
+          \section{}
+          \end{document}
+
+      後はコンパイルして印刷して終りです．
+
+○  追加及び修正されたコマンド及びパラメータの利用法
+
+◆  \caption[1st_entry]{japanese_headings}{english_headings}
+        日本語と英語のタイトルを指定するようになっています．省略はでき
+      ません．
+      1st_entry はオリジナルの \caption と同じものです．
+      図や表の番号は，(セクション番号).(図や表の番号)となります．
+
+◆  \indentlength
+        \indentlengthだけ字下げした領域を本文の領域にします．但し，
+      セクション名は字下げを行いません．
+      このパラメータの値を変更するときは\changeindentを使用します．
+      パラメータの変更は，\sectionコマンドの後で有効です．
+          \changeindent{2cm}
+      数式モード ( \[ \] や \begin{equation}...\end{equation} )では
+      字下げが行われません．\mathoffsetで調整を行っています．
+          |<-------------- \textwidth ----------->|
+          |           |                           |
+          |1 section  |                           |
+          |1.1subsect.|                           |
+          |           | .... contents ............|
+          |           |...........................|
+          |           |                           |
+          \indentlength                           |
+          |<--------->|                           |
+          |           |                           |
+          |           |                           |
+
+◆  \mathoffset
+        数式のテキストの中心からのオフセットを指定します．パラメータの
+      変更は\setlengthを使用します．
+          \setlength{\mathoffset}{\indentlength}
+
+          |                     | \mathoffset = 0     |
+          |                     v                     |
+          |                   X = a                   |
+          |     0 > \mathoffset | \mathoffset > 0     |
+          |         |<--------->|<----------->|       |
+          |         |           |             |       |
+          |       X = a                     X = a     |
+
+◆  \sectionmarkfont{fontsize}
+        柱のセクションを書く際に用いるフォントサイズを指定します．
+          \sectionmarkfont{\normalsize}
+
+◆  \wholepage{figure or table}
+        1つの図や表を1ページにいれるときに，垂直方向にセンタリングを行
+      います．
+          \begin{figure}
+          \wholepage{epsfile{file=sample.pstex}\caption{foo}{bar}}
+          \end{figure}
+
+◆  \ifigure, \itable, \icenter
+        横方向に\indentlengthスキップした位置からセンタリングを行う．
+
+ここから後は，私が修正を加えたものです．
+
+◆  \acknowledgements
+        謝辞を書くときに使います．セクション番号なしで`謝辞'と表示し，
+      目次の方にも同様にセクション番号なしで`謝辞'と表示します．
+
+◆  \acknowledgename{title}
+        謝辞と書かずに title に置き換えます．
+
+◆  \refname{title}
+        参考文献と書かずに title に置き換えます．
+
+◆  \roundbracket
+        参考文献の番号を()で括る．デフォルトは[]です．
+
+◆  \appendix
+        付録を書きはじめる前に指定します．セクション番号は英大文字でA
+      から始まります．本文では次のようになります．
+          付録A 計算のフォロー
+                式(1)の...
+          A.1 ...
+          付録B ...
+      目次は，次のようになります．
+          目次
+          1 はじめに
+          付録
+          A 計算のフォロー
+             A.1
+          B
+
+◆  \changecontentsname{name}
+        目次を`name'に置き換えます．
+
+○  参考
+        付録を書く時の \appendixの位置について，現在わかっていることに
+      ついて書いておきます(益本氏の報告による)．
+      \includeコマンドを用いて付録を読み込むときに例えば，次のように書
+      いていますと，目次で付録という文字が一番最後にくることがあるよう
+      です．
+          \include{end}
+          \appendix
+          \include{appendix1}
+      \includeのかわりに\inputを用いる場合には，この問題は生じないよう
+      です．
+      対処法としましては，次にあげるものが考えられます．
+          1. \inputコマンドを用いる．
+          2. \appendixをメインのファイルに書かずに\includeで読み込む
+             ファイルに書いておく．
+      付録を書くときの参考にして下さい．
+
+○  謝辞
+        本スタイルファイルを作成するに当たり，オリジナルをスタイルファ
+      イル(A4.tex, eepaper.sty, ultracit.sty)を作成されましたtks@leda氏
+      及び卒業計画報告書用中表紙を作成していただいた大西 正輝氏，バグ報
+      告を頂いた渡辺 浩司氏，貴重な情報を頂いた益本 昌幸氏に感謝致します．
+
+○  改変履歴
+        * は未公開版です．
+
+      version 1.0.0 1997.2.27
+        ・eepaper2.sty, ultracit.sty, aa4.texを1つのファイルにまとめて
+          パラメータ及びコマンドの微調整．
+      version 1.0.1 1997.2.27
+        ・修士学位論文用中表紙の作成．
+      version 1.0.2 1997.2.27  +(Masaki Onishi)
+        ・卒業研究報告書中表紙の作成.
+      version 1.0.3 1997.2.28
+        ・\acknowledgementsコマンドが\acknowledgeになっていたのを修正
+          (渡辺 浩司氏のバグ報告による)．
+        ・\appendixコマンドの後，数式番号が(1.1)のようになっていたので
+          (A.1)となるように修正(渡辺 浩司氏のバグ報告による)．
+      version 1.0.4 1997.3.1
+        ・中表紙で年度の計算に誤りがあったのを直した．
+
+○  作者・著作権者連絡先
+                       mori@com.cs.osakafu-u.ac.jp (1997年3月まで有効)
+                                                              L&D SOFT
+                       onishi@com.cs.osakafu-u.ac.jp
+                                                         Masaki Onishi
+
+○  おまけ
+        最近ペンネームの由来を知りたがっている人が多いような. . .
+      (片目をつむり，人指し指を唇にあてながら)それは秘密です．(by謎の獣神官)
+
+%%%%%[ ファイルの終りです ]%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+======================= ここまで
+
+
+       **************************************************
+           大阪府立大学大学院 工学研究科 博士前期課程
+                 電気・情報系専攻  情報工学分野
+           知能情報講座  Ｍ１ 前田英巳子(Emiko Maeda)
+         ----------------------------------------------
+              e-mail:maeda@ss.cs.osakafu-u.ac.jp
+       **************************************************
+

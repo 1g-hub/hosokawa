@@ -1,0 +1,367 @@
+% $ID: m2yousi.sty ver 1.0.0 1997.01.29 (C) L&D SOFT $
+% 大阪府立大学1997年修士論文要旨スタイル
+%      要 ilib.sty iparam.sty profile.cnf
+%
+%             m2yousi.sty by L&D SOFT (mori@com.cs.osakafu-u.ac.jp)
+%   reference teikei.sty by 萩平 哲 (hagihira@anes.med.osaka-u.ac.jp)
+%             科研費マクロ by Ken-Ichi Aoki (aoki@hep.s.kanazawa-u.ac.jp)
+%                             Taikan Oki    (taikan@hydro.iis.u-tokyo.ac.jp)
+%                             Shinichi Nawa (nawa@ps1.yukawa.kyoto-u.ac.jp)
+%                             Toru Sato     (tsato@ibuki.kuee.kyoto-u.ac.jp)
+%             script.sty by Yoshiteru Sagiya, impress corporation.
+%
+% いろいろとややこしいことがありますので再配布及び無断複製を禁止します．
+% 各自で私も含めた上記の方々全員に許可を取った場合はこの限りではありません．
+%
+\typeout{Document Style `修論要旨' ver 1.0.0 1997.01.29 (C) L&D SOFT.}
+
+\@options
+\nofiles
+\@input{ilib.sty}
+
+%
+% 変数の設定
+%
+
+\newdimen\char@size \char@size=7.4mm    % マス目の縦横
+\newdimen\char@seps \char@seps=1.0mm    % マス目の上下のアキ
+\newdimen\thin@tick \thin@tick=0.3pt    % 細い罫線
+\newdimen\thic@tick \thic@tick=0.5pt    % 太い罫線
+
+\newdimen\char@skip \char@skip=\char@size
+\advance\char@skip by\thin@tick
+
+%
+% 版面の設定
+%
+
+\newdimen\kihon@skip \kihon@skip=3.15mm  % 基本の行送り
+\advance\kihon@skip by14pt
+\advance\kihon@skip by2.5\thin@tick
+
+\newdimen\top@skip  \top@skip=98mm
+\newdimen\top@sep   \top@sep=\char@seps
+
+\@tempdima=\char@size
+\advance\@tempdima by-14pt \divide\@tempdima by2
+
+\advance\top@sep by\@tempdima
+\advance\top@skip by\top@sep
+
+\pagesize{210truemm}{297truemm}{30}{20}{14}{\kihon@skip}{\top@skip}{31mm}
+
+%
+% 書体/行送りの設定
+%
+
+\font\einitialfont=cmti9                % 欧文イニシャル書体
+
+\definefont{normal}{14}{mc}{rm}         % 基本組みの書体
+\defineparagraph{normal}{\kihon@skip}{30\Hs}{0\Hs}{0\Hs}
+
+\def\@normalsize{\selectfont{normal}\selectparagraph{normal}}
+
+\relative{14}
+
+%
+% 柱とノンブルの定義
+%
+
+\definefont{nombrefont@scriptpage}{12}{gt}{bf}
+\definefont{hashirafont@scriptpage}{12}{gt}{bf}
+\def\氏名{}
+\def\題目{}
+\def\idefineposition#1{%
+\expandafter\gdef\csname ps@#1\endcsname{%
+  \let\@mkboth\markboth
+  \def\@evenfoot{}\def\@oddfoot{}\def\@evenhead{}
+  \def\@oddhead{\kern-\oddsidemargin\iftombow\else\kern-1in\fi\hss
+    \vbox{
+      \Hrulethick{28mm}{45mm}{135mm}%題目
+      \Hrulethick{28mm}{62mm}{135mm}
+      \Hrulethick{5mm}{68mm}{148mm}%専攻
+      \Vrulethick{5mm}{68mm}{85mm}
+      \Vrulethick{20mm}{68mm}{85mm}
+      \Vrulethick{54mm}{68mm}{85mm}
+      \Vrulethick{69mm}{68mm}{85mm}
+      \Vrulethick{99mm}{68mm}{85mm}
+      \Vrulethick{114mm}{68mm}{85mm}
+      \Vrulethick{148mm}{68mm}{85mm}
+      \Hrulethick{5mm}{85mm}{148mm}
+      {\XM=0mm\YM=0mm\XYBC{16mm}{41mm}{28mm}{45mm}{\bunshostyle{題~目}}}
+      {\XM=0mm\YM=0mm\XYBC{28mm}{39.5mm}{135mm}{45mm}{\bunshostyle
+          \baselineskip=16mm\selectfont{teikei@title}\centering\題目}}
+      {\XM=0mm\YM=0mm\XYBC{5mm}{68mm}{20mm}{85mm}{\bunshostyle{専　攻}}}
+      {\XM=0mm\YM=0mm\XYBC{19mm}{68mm}{53mm}{85mm}{\bunshostyle{電気・情報系}}}
+      {\XM=0mm\YM=0mm\XYBC{54mm}{68mm}{69mm}{85mm}{\bunshostyle{分　野}}}
+      {\XM=0mm\YM=0mm\XYBC{68mm}{68mm}{98mm}{85mm}{\bunshostyle{情報工学}}}
+      {\XM=0mm\YM=0mm\XYBC{99mm}{68mm}{114mm}{85mm}{\bunshostyle{氏　名}}}
+      {\XM=0mm\YM=0mm\XYBC{113mm}{68mm}{147mm}{85mm}{\bunshostyle\氏名}}
+      }
+    }}%  柱
+    \def\chaptermark##1{\markboth{##1}{}}
+    \def\sectionmark##1{\markright{##1}}
+}
+\idefineposition{scriptpage}
+\thispagestyle{scriptpage}
+\markboth{}{}
+
+%
+% イニシャル用マクロ
+%
+
+\newbox\initial@box
+\newif\if@initial \@initialfalse
+
+\newdimen\initial@width \initial@width=148mm
+\newdimen\initial@skip  \initial@skip=293.5mm
+\advance\initial@skip by-\headsep
+\advance\initial@skip by-10mm
+
+\def\initial{\global\@initialtrue}
+
+\def\initialstring#1{%
+  \global\setbox\initial@box=\hbox to\initial@width{\hss\underline{\einitialfont#1}\hss}}
+
+\catcode`.=11
+\@input{profile.cnf}
+\@ifundefined{@namer.my.eg}%
+  {\initialstring{\null}}%
+  {\initialstring{\@namer.my.eg}}
+\catcode`.=12
+
+%
+% 原稿用紙のマクロ
+%
+
+\newbox\x@box
+\newdimen\x@skip \x@skip=\baselineskip
+
+%
+% マス目の初期化
+%
+
+\def\@q{%
+  \vrule width\thin@tick height\char@size depth0pt
+  \hskip\char@size}
+
+\def\@r{%
+  \vrule width\thic@tick height\char@size depth0pt
+  \hskip\char@size}
+
+\newbox\masuA
+\newbox\masuB
+\newbox\masuC
+\newbox\masuD
+
+\global\setbox\masuA=\hbox{%
+  \@r\@q\@q\@q\@q\@q\@q\@q\@q\@q\@q\@q\@q\@q\@q\@q\@q\@q\@q\@q\@r
+  \hskip-\char@size}
+
+\@tempdima=\char@seps
+\advance\@tempdima by-\thin@tick
+\advance\@tempdima by-\thic@tick
+
+\setbox\masuB=\vbox{%
+\parindent=0pt\offinterlineskip
+\hrule width\wd\masuA height\thin@tick depth0pt
+\hbox to\wd\masuA{%
+\vrule width\thic@tick height\@tempdima depth0pt
+\hss
+\vrule width\thic@tick height\@tempdima depth0pt}
+\hrule width\wd\masuA height\thin@tick depth0pt}
+
+\setbox\masuC=\vbox{%
+\parindent=0pt\offinterlineskip
+\hrule width\wd\masuA height\thic@tick depth0pt
+\hbox to\wd\masuA{%
+\vrule width\thic@tick height\@tempdima depth0pt
+\hss
+\vrule width\thic@tick height\@tempdima depth0pt}
+\hrule width\wd\masuA height\thin@tick depth0pt}
+
+\setbox\masuD=\vbox{%
+\parindent=0pt\offinterlineskip
+\hrule width\wd\masuA height\thin@tick depth0pt
+\hbox to\wd\masuA{%
+\vrule width\thic@tick height\@tempdima depth0pt
+\hss
+\vrule width\thic@tick height\@tempdima depth0pt}
+\hrule width\wd\masuA height\thic@tick depth0pt}
+
+\setbox\x@box=\vbox to0pt{\parindent=0pt
+\kern-\top@sep
+\vbox{\offinterlineskip
+\@tempcnta=0
+  \copy\masuC
+  \loop\ifnum\@tempcnta<19
+  \copy\masuA
+  \copy\masuB
+  \advance\@tempcnta by1\relax\repeat
+  \copy\masuA
+  \copy\masuD}\vss}
+
+\def\@pattern{\copy\x@box}
+
+%
+% マス目印刷用にOUTPUTルーティンを再定義
+%
+
+\newif\if@drawmass \@drawmassfalse
+\def\drawmass{\global\@drawmasstrue}
+\def\@outputpage{\begingroup\catcode`\ =10 
+     \let\-\@dischyph \let\'\@acci \let\`\@accii \let\=\@acciii
+    \if@specialpage 
+     \global\@specialpagefalse\@nameuse{ps@\@specialstyle}\fi
+     \if@twoside 
+       \ifodd\count\z@ \let\@thehead\@oddhead \let\@thefoot\@oddfoot
+            \let\@themargin\oddsidemargin
+          \else \let\@thehead\@evenhead
+          \let\@thefoot\@evenfoot \let\@themargin\evensidemargin
+     \fi\fi
+     \shipout
+     \vbox{\iftombow\copy\tombow@box\fi
+           \normalsize \baselineskip\z@ \lineskip\z@ 
+           \let\par\@@par %% 15 Sep 87
+           \iftombow\else\vskip-1in\fi
+           \vskip \topmargin \moveright\@themargin
+           \vbox{\setbox\@tempboxa
+                   \vbox to\headheight{\vfil \hbox to\textwidth
+                                       {\let\label\@gobble \let\index\@gobble
+                                         \@thehead}} %% 22 Feb 87
+                 \dp\@tempboxa\z@
+                 \box\@tempboxa
+                 \vskip \headsep
+                 \if@initial
+                   \vbox to0pt{\kern\initial@skip\copy\initial@box\vss}
+                 \fi
+                 \if@drawmass
+                 \@pattern%   マス目を印刷
+                 \fi
+                 \box\@outputbox
+                 \baselineskip\footskip
+                 \hbox to\textwidth{\let\label\@gobble 
+                           \let\index\@gobble  %% 22 Feb 87
+                           \@thefoot}}}%
+           \global\@colht\textheight
+           \endgroup\stepcounter{page}\let\firstmark\botmark}
+
+
+%
+% アライメント用マクロ
+%
+
+\def\listofcontrolsequence{\\\par\\\newpage\\\clearpage\\\TeX\\\LaTeX}
+
+\newif\if@member
+\hfuzz=.5\Hs
+\parfillskip=0pt plus1fil
+
+\def\@buff#1{\leavevmode\hbox to\char@skip{\hss#1\hss}\penalty0}
+\def\@dbuff#1{\leavevmode\hbox to2\char@skip{\hss#1\hss}\penalty0}
+
+\long\def\is@member#1\of#2{%
+  \global\@memberfalse
+  \def\@given{#1}%
+  \long\def\\##1{\def\next{##1}%
+  \ifx\next\@given
+    \global\@membertrue
+  \fi}#2}
+
+\long\def\disable#1{%
+  \ignorespaces
+  \ifx#1\enable
+    \let\next=\relax
+  \else
+    \is@member#1\of\listofcontrolsequence
+    \if@member
+      \ifx#1\TeX\@dbuff{\TeX}\else
+      \ifx#1\LaTeX\@dbuff{\LaTeX}\else
+      #1\fi\fi
+    \else
+      \@buff{#1}%
+    \fi
+    \let\next=\disable
+  \fi
+\next}
+
+
+
+% 文章入力のスタイル
+\definefont{teikei@font}{12}{mc}{rm}% 名前などのフォントの指定
+\definefont{teikei@title}{14}{gt}{bf}% タイトルのフォントの指定
+\def\bunshostyle{
+  \selectfont{teikei@font}
+   \linewidth=\hsize\parindent=0pt
+   \parskip=1.0mm plus 0.5mm minus 1mm\rightskip=0pt\kanjiskip=0pt plus0.3pt
+}
+%magic way of pointing a place defined by X-Y coordinate
+\newdimen\htbackskip
+\newdimen\dpbackskip
+\long\def\XY#1#2#3{
+  \setbox\dummybox=\vbox{
+    \vskip#2
+    \hbox to \hsize{%
+      \hskip#1
+      \vbox{\advance\hsize by -#1#3}\hfil
+    }
+  }
+  \htbackskip=-\ht\dummybox
+  \dpbackskip=-\dp\dummybox
+  \box\dummybox\nointerlineskip
+  \vskip\htbackskip
+  \vskip\dpbackskip
+}
+% 絶対位置　(#1, #2) (#3, #4)で定まるボックスに
+% #5 を入れて上下左右でセンタリングする。
+\long\def\XYBC#1#2#3#4#5{
+  \X=#3 \Y=#4 \advance\X by -#1 \advance\Y by -#2
+  \XY{#1}{#2}{\CBOX{\X}{\Y}{#5}}
+}
+% BOX を描く。縦横にセンタリングされる。#1, #2引数は長さで与える
+% 箱の横の長さ、縦の長さ、中身
+\long\def\CBOX#1#2#3{{
+  \hsize=#1\linewidth=\hsize
+  \setbox\dummybox\hbox{#3}
+  \vbox to #2{
+    \vfil
+    \ifdim#1 < \wd\dummybox
+      \X=#1
+      \advance\X by -4mm
+      \hbox to \hsize{\hfil\vbox{\hsize=\X\linewidth=\hsize #3 }\hfil}
+    \else
+      \hbox to \hsize{\hfil#3 \hfil}
+    \fi
+    \vfil
+  }
+}}
+\newdimen\rulelength
+%vertival rule with 1pt width
+% 縦罫線　1pt 幅　始点座標　(#1, #2) 終点Ｙ座標 #3
+\def\Vrulethick#1#2#3{
+   \rulelength=#3
+   \advance\rulelength by -#2
+   \XY{#1}{#2}{\vrule width1pt height\rulelength depth0pt}
+}
+%horizontal rule with 1pt width
+% 横罫線　1pt 幅　始点座標　(#1, #2) 終点Ｘ座標 #3
+\def\Hrulethick#1#2#3{
+   \rulelength=#3
+   \advance\rulelength by -#1
+   \XY{#1}{#2}{\vrule width\rulelength height1pt depth0pt}
+}
+
+%
+% working variables
+%
+\newbox\dummybox
+%
+\newdimen\X
+\newdimen\XA
+\newdimen\Y
+\newdimen\YA
+% memory for positions of rules
+\newdimen\XM \XM=0mm% X-direction margin
+\newdimen\YM \YM=0mm% Y-direction margin
+\endinput
+%%%%%[ EOF ]%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
