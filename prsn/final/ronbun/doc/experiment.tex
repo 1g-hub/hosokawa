@@ -4,7 +4,8 @@
 \changeindent{2cm}
 
 本研究ではデータセットとして CIFAR-10\cite{krizhevsky2009learning} を用いた．
-また実験1，2では半教師あり学習のベースモデルとしてそれぞれ FixMatch ，SimCLR を用いて GA によるラベル探索及び性能評価を行った．
+また実験1，2では半教師あり学習のベースモデルとしてそれぞれ FixMatch ，SimCLR を用いて GA によるラベル探索及び性能評価を行った．FixMatch と SimCLR で実験を行うことについて，同じ実験設定で同程度の精度を出すことができる一方
+，FixMatch は毎回モデル全体を学習するのに対し　SimCLR は出力層である分類器のみが学習される違いがある．
 
 \changeindent{0cm}
 \subsection{実験1}
@@ -90,7 +91,7 @@
 
 \begin{figure}[h]
 	\begin{center}
-		\includegraphics[scale=0.65]{./images/ex1_res_graph.png}
+		\includegraphics[scale=4.0]{./images/ex1_res_graph.png}
 		\caption{実験1 : GA の探索結果\label{fig:ex1_res1}}
 	\end{center}
 \end{figure}
@@ -104,10 +105,10 @@
 \clearpage
 
 次に，表\ref{tb:ex1_res3}に探索された個体によるテスト識別率を示す．
-適応度の平均が最大であった14世代の全個体のうち各遺伝子座で最も多く選ばれた遺伝子を採択して
+図\ref{fig:ex1_res1}より適応度の平均が最大であった15世代の全個体のうち各遺伝子座で最も多く選ばれた遺伝子を採択して
 得られる新たな個体を最終的な個体として学習を行った．またある遺伝子座について選ばれた遺伝子が14世代の全個体に対して占めた割合に対し確信度として閾値を設けて，採択数を絞った状態での学習も行った．
 
-結果は全て探索した疑似ラベルを使用しないベースラインをすべて下回った．
+結果は全て探索した疑似ラベルを使用しないベースラインを下回った．
 考えられることとして，まず疑似ラベルの精度が低いことによって疑似ラベルによる正則化がうまく機能しなかったことが
 挙げられる．また，FixMatch のラベルなしデータによる疑似ラベルの正則化と，ラベル付きデータとして混ぜられた疑似ラベルの正則化が互いに妨害をした可能性が考えられる．
 
@@ -116,11 +117,11 @@
 	\caption{実験1 : テスト識別率\label{tb:ex1_res3}}
 	\scalebox{1.0}{
 		\begin{tabular}{|c|c|c|c|} \hline
-			採択数&正答数&閾値&テスト識別率\\ \hline
-			0&&&0.868\\ \hline\hline
-			100&46&なし&0.836\\ \hline
-			39&22&0.19&0.862\\ \hline
-			19&14&0.2&0.825\\ \hline
+			閾値&採択数&正答数&テスト識別率\\ \hline
+			&0&&0.868\\ \hline\hline
+			なし&100&46&0.836\\ \hline
+			0.19&39&22&0.862\\ \hline
+			0.2&19&14&0.825\\ \hline
 		\end{tabular}
 	}
 \end{table}
@@ -210,7 +211,7 @@
 
 \begin{figure}[h]
 	\begin{center}
-		，		\includegraphics[scale=0.65]{./images/ex2_res_graph.png}
+		\includegraphics[scale=0.65]{./images/ex2_res_graph.png}
 		\caption{実験1 : GA の探索結果\label{fig:ex2_res1}}
 	\end{center}
 \end{figure}
@@ -243,3 +244,6 @@
 	}
 \end{table}
 
+また，実験2では Encoder の学習時間が 1days GPU かかってはいるものの，
+1個体の適応度を出す時間について，実験1に対し16倍ほど速くすることができ，
+個体数や世代数を多くするにはベースモデルとして FixMatch よりも SimCLR を用いる方が良いことが分かる．

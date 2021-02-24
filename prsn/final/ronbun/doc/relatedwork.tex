@@ -40,7 +40,7 @@ FixMatch\cite{sohn2020fixmatch}\ は\ SSL\ の一つである．
 	\begin{center}
 		\includegraphics[scale=0.6]{./images/FixMatch.PNG}
 		\caption[FixMatch の概略図]
-		{FixMatch の概略図 : 文献\cite{sohn2020fixmatch}の Figure 1 を参照\label{fig:FixMatch}}
+		{FixMatch の概略図 : (文献\cite{sohn2020fixmatch}の Figure 1 を参照\label{fig:FixMatch})}
 	\end{center}
 \end{figure}
 
@@ -69,7 +69,7 @@ Consistency Regularization \cite{zhang2019consistency} は正則化手法の一�
 \subsubsection{更新}
 \changeindent{2cm}
 まず，バッチサイズを $B$ としラベル付きデータを ${\cal X} = {(x_b, p_b): b \in (1, ... ,B)}$ 
-としたとき，ラベル付きデータに対するロス ${\ell}_{\rm s}$ とすると，(\ref{quadLs})式で与えられる．
+としたとき，ラベル付きデータに対するロスを ${\ell}_{\rm s}$ とすると，(\ref{quadLs})式で与えられる．
 
 \begin{equation}
 \label{quadLs}
@@ -84,7 +84,7 @@ Consistency Regularization \cite{zhang2019consistency} は正則化手法の一�
 {\mathbb{1}({\rm max}(q_b)\geq\tau){\rm H}(\hat{q}_b,p_{\rm m}(y|{\cal A}(u_b)))}
 \end{equation}
 
-となる．このとき，$\mu$ はバッチ内のラベル付きデータに対するラベルなしデータの比率，$\cal A(\cdot)$を強変換である．
+となる．このとき，$\mu$ はバッチ内のラベル付きデータに対するラベルなしデータの比率，$\cal A(\cdot)$は強変換である．
 
 従って，ラベルなしデータの重みを$\lambda$	として，バッチ全体のロスは ${\ell}_{\rm s}+\lambda {\ell}_{\rm u}$ となる．
 
@@ -99,7 +99,7 @@ Simple framework for Contrastive Learning of visual Representation(SimCLR)\cite{
 	\begin{center}
 		\includegraphics[scale=1.0]{./images/SimCLR.png}
 		\caption[SimCLR の概略図]
-		{SimCLR の概略図 : 文献\cite{chen2020big}の Figure 3 を参照\label{fig:SimCLR}}
+		{SimCLR の概略図 : (文献\cite{chen2020big}の Figure 3 を参照\label{fig:SimCLR})}
 	\end{center}
 \end{figure}
 
@@ -110,9 +110,9 @@ Contrastive Learning (CL)\cite{tian2020makes} とは特徴表現を獲得する�
 自己教師あり学習\cite{doersch2017multi}のひとつである．
 ある画像変換をした画像のペアについて元画像が一致するか否かを識別するタスクであり，
 一つの画像から得られる特徴表現が画像変換によって
-画像の持つ意味が大きく変化させない変形を獲得することができる．
+画像の持つ意味が大きく変化しないような Encoder を獲得することができる．
 具体的な方法について，バッチ内の画像枚数を $N$ 枚とすると， Data Augmentation によって2倍に増やしたとき，
-各画像に対して正例は1枚，負例は $2(N-1)$ 枚となる．このとき特徴ベクトル間の距離として cos 類似度を用い，(\ref{sim})式となる．また，正例との距離を小さくかつ，負例との距離を大きくするために正例のペア $({\bm z}_i,{\bm z}_j)$ に対するロス $\ell(i, j)$ は(\ref{quad_posl})式で表され，
+各画像に対して正例は1枚，負例は $2(N-1)$ 枚となる．このとき特徴ベクトル間の距離として cos 類似度を用いると，(\ref{sim})式で表される．また，正例との距離を小さくかつ，負例との距離を大きくするために正例のペア $({\bm z}_i,{\bm z}_j)$ に対するロス $\ell(i, j)$ は(\ref{quad_posl})式で表され，
 バッチ全体のロス$\mathcal L$は(\ref{quad_L})式で表される．
 
 \begin{equation}
@@ -137,13 +137,13 @@ Contrastive Learning (CL)\cite{tian2020makes} とは特徴表現を獲得する�
 \changeindent{2cm}
 Residual Network (: ResNet)\cite{he2016deep} は　Deep Neural Network (: DNN)\cite{larochelle2009exploring} のモデルの一つであり，
  DNNにおいて層を深くすることで発生する劣化問題及び勾配消失問題\cite{hochreiter1998vanishing}を解消するために残差についての学習を行うモデルである．図\ref{fig:ResBlock}に ResNet の構成要素である Residual Block の構造を示す．
-2層の畳み込み層とショートカットの足し合わせた構造となっている．
+2層の畳み込み層とショートカットを足し合わせた構造となっている．
 
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.5]{./images/ResBlock.jpg}
 		\caption[Residual Block の構造]
-		{Residual Block の構造 : 文献\cite{he2016identity}の Figure 2.(a) を参照\label{fig:ResBlock}}
+		{Residual Block の構造 : (文献\cite{he2016identity}の Figure 2.(a) を参照\label{fig:ResBlock})}
 	\end{center}
 \end{figure}
 

@@ -1,8 +1,8 @@
 \contentsline {table}{\numberline {5.1}{\ignorespaces 実験1 : データ内訳}}{9}
-\contentsline {table}{\numberline {5.2}{\ignorespaces 実験1 : GAの設定}}{9}
-\contentsline {table}{\numberline {5.3}{\ignorespaces 実験1 : FixMatchの設定}}{10}
-\contentsline {table}{\numberline {5.4}{\ignorespaces 実験1 : テスト識別率}}{13}
-\contentsline {table}{\numberline {5.5}{\ignorespaces 実験2 : データ内訳}}{13}
-\contentsline {table}{\numberline {5.6}{\ignorespaces 実験2 : GAの設定}}{14}
-\contentsline {table}{\numberline {5.7}{\ignorespaces 実験2 : SimCLR の設定}}{15}
-\contentsline {table}{\numberline {5.8}{\ignorespaces 実験2 : テスト識別率}}{17}
+\contentsline {table}{\numberline {5.2}{\ignorespaces 実験1 : GAの設定}}{10}
+\contentsline {table}{\numberline {5.3}{\ignorespaces 実験1 : FixMatchの設定}}{11}
+\contentsline {table}{\numberline {5.4}{\ignorespaces 実験1 : テスト識別率}}{14}
+\contentsline {table}{\numberline {5.5}{\ignorespaces 実験2 : データ内訳}}{14}
+\contentsline {table}{\numberline {5.6}{\ignorespaces 実験2 : GAの設定}}{15}
+\contentsline {table}{\numberline {5.7}{\ignorespaces 実験2 : SimCLR の設定}}{16}
+\contentsline {table}{\numberline {5.8}{\ignorespaces 実験2 : テスト識別率}}{18}

@@ -1,10 +1,10 @@
-% iepaper.sty - 1996”N“x‘åã•{—§‘åŠwî•ñHŠw‰ÈCm‹y‚Ñ‘²‹Æ˜_•¶—pƒXƒ^ƒC
-%               ƒ‹ƒtƒ@ƒCƒ‹
+% iepaper.sty - 1996å¹´åº¦å¤§é˜ªåºœç«‹å¤§å­¦æƒ…å ±å·¥å­¦ç§‘ä¿®å£«åŠã³å’æ¥­è«–æ–‡ç”¨ã‚¹ã‚¿ã‚¤
+%               ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«
 % $ID: iepaper.sty ver 1.0.4 1997.3.1 (C) L&D SOFT $
 %
-% ‚±‚Ìƒtƒ@ƒCƒ‹‚ÌÅŒã‚ÉƒhƒLƒ…ƒƒ“ƒg‚ª‚Â‚¢‚Ä‚¢‚Ü‚·D
+% ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã®æœ€å¾Œã«ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆãŒã¤ã„ã¦ã„ã¾ã™ï¼
 %
-\typeout{˜_•¶ƒXƒ^ƒCƒ‹ ver 1.0.4 1997.3.1 (C) L&D SOFT}
+\typeout{è«–æ–‡ã‚¹ã‚¿ã‚¤ãƒ« ver 1.0.4 1997.3.1 (C) L&D SOFT}
 
 \renewcommand{\baselinestretch}{1.25}
 \oddsidemargin-1in\advance\oddsidemargin30mm
@@ -33,7 +33,7 @@
   \def\@listi{\leftmargin\leftmargini\topsep4pt plus2pt minus2pt\parsep2pt
   plus1pt minus1pt\itemsep \parsep}}
 
-% \@trivlist‚Ì’²®
+% \@trivlistã®èª¿æ•´
 \def\@trivlist{\@topsepadd\topsep
   \if@noskipsec \leavevmode \fi
   \ifvmode \advance\@topsepadd\partopsep \else \unskip\par\fi
@@ -44,7 +44,7 @@
   \@setpar{\if@newlist\else{\@@par}\fi}%
   \global\@newlisttrue \@outerparskip\parskip}
 
-% ƒZƒNƒVƒ‡ƒ“ƒRƒ}ƒ“ƒh“™
+% ã‚»ã‚¯ã‚·ãƒ§ãƒ³ã‚³ãƒãƒ³ãƒ‰ç­‰
 \newdimen\indentlength \indentlength5zw
 \def\changeindent#1{\indentlength#1\relax\@iepstyle}
 \newskip\@Indent
@@ -69,12 +69,12 @@
 {\baselineskip}{-1em}{\normalsize\bf}}
 \def\subparagraph{\@startsection{subparagraph}{4}{\parindent}
 {\baselineskip}{-1em}{\normalsize\bf}}
-% Ó«
+% è¬è¾
 \def\acknowledgements{\section*{\@acknowledgename}%
   \addcontentsline{toc}{section}{\@acknowledgename}\mark{}}
 \def\acknowledge{\acknowledgements}
-\def\acknowledgename#1{\def\@acknowledgename{#1}}\acknowledgename{Ó«}
-% •t˜^
+\def\acknowledgename#1{\def\@acknowledgename{#1}}\acknowledgename{è¬è¾}
+% ä»˜éŒ²
 \newif\if@appendix \@appendixfalse
 \def\appendix{\par
  \setcounter{section}{0}
@@ -82,15 +82,15 @@
  \setcounter{subsubsection}{0}
  \def\thesection{\Alph{section}}
  \def\theequation{\@Alph{\c@section}.\@arabic{\c@equation}}
- \addcontentsline{toc}{section}{•t˜^}
+ \addcontentsline{toc}{section}{ä»˜éŒ²}
  \@appendixtrue
  \def\@sect##1##2##3##4##5##6[##7]##8{\ifnum ##2>\c@secnumdepth
-     \def\@svsec{}\else 
+     \def\@svsec{}\else
      \refstepcounter{##1}\edef\@svsec{\csname the##1\endcsname\hskip 1em }\fi
      \@tempskipa ##5\relax
-      \ifdim \@tempskipa>\z@ 
+      \ifdim \@tempskipa>\z@
         \begingroup ##6\relax
-          \@hangfrom{\hskip ##3\relax\ifnum##2=1 •t˜^\fi\@svsec}{\interlinepenalty \@M ##8\par}%
+          \@hangfrom{\hskip ##3\relax\ifnum##2=1 ä»˜éŒ²\fi\@svsec}{\interlinepenalty \@M ##8\par}%
         \endgroup
        \csname ##1mark\endcsname{##7}\addcontentsline
          {toc}{##1}{\ifnum ##2>\c@secnumdepth \else
@@ -103,10 +103,10 @@
                        ##7}}\fi
      \@xsect{##5}}
 }
-% Ql•¶Œ£
+% å‚è€ƒæ–‡çŒ®
 \newif\if@squarebracket\@squarebrackettrue
 \def\roundbracket{\@squarebracketfalse}
-\def\refname#1{\def\@refname{#1}}\refname{Ql•¶Œ£}
+\def\refname#1{\def\@refname{#1}}\refname{å‚è€ƒæ–‡çŒ®}
 \def\thebibliography#1{\section*{\@refname}\@mkboth{\@refname}{\@refname}
  \addcontentsline{toc}{section}{\@refname}
   \list{\if@squarebracket[\arabic{enumi}]\else(\arabic{enumi})\fi}%
@@ -143,13 +143,13 @@
      \if@squarebracket\def\@citea{]--[}\else\def\@citea{)--(}\fi\fi
     \advance\@tempcnta\m@ne\the\@tempcnta\@citea\the\@tempcntb}\fi\fi}
 
-% ƒwƒbƒfƒBƒ“ƒOƒX‚Ìİ’è
+% ãƒ˜ãƒƒãƒ‡ã‚£ãƒ³ã‚°ã‚¹ã®è¨­å®š
 \newif\if@master\@mastertrue
 
 \def\sectionmarkfont#1{\def\@sectmarkfont{\noexpand #1}}
 \sectionmarkfont{\normalsize}
 
-\newif\if@head@upper \@head@uppertrue%’Œ‚Ì‰pŒê‚ğ‘å•¶š‚É
+\newif\if@head@upper \@head@uppertrue%æŸ±ã®è‹±èªã‚’å¤§æ–‡å­—ã«
 \def\headnoupper{\@head@upperfalse}
 
 \def\ps@iepheadings{\let\@mkboth\markboth
@@ -159,25 +159,25 @@
     \vskip2pt\hrule width\textwidth height1pt}}%
   \def\@oddfoot{\vbox{\hrule width\textwidth height1pt\vskip1pt%
     \hbox to\textwidth{\hfil\katu%
-      \if@master ‘åã•{—§‘åŠw‘åŠw‰@HŠwŒ¤‹†‰È“d‹CEî•ñŒnêU’m”\î•ñHŠw•ª–ì\else
-      ‘åã•{—§‘åŠwHŠw•”’m”\î•ñHŠw‰È\fi}}}%
+      \if@master å¤§é˜ªåºœç«‹å¤§å­¦å¤§å­¦é™¢å·¥å­¦ç ”ç©¶ç§‘é›»æ°—ãƒ»æƒ…å ±ç³»å°‚æ”»çŸ¥èƒ½æƒ…å ±å·¥å­¦åˆ†é‡\else
+      å¤§é˜ªåºœç«‹å¤§å­¦å·¥å­¦éƒ¨çŸ¥èƒ½æƒ…å ±å·¥å­¦ç§‘\fi}}}%
   \def\@evenfoot{\vbox{\hrule width\textwidth height1pt\vskip1pt%
     \hbox to\textwidth{\katu%
-      \if@master ‘åã•{—§‘åŠw‘åŠw‰@HŠwŒ¤‹†‰È“d‹CEî•ñŒnêU’m”\î•ñHŠw•ª–ì\else
-      ‘åã•{—§‘åŠwHŠw•”’m”\î•ñHŠw‰È\fi}}}%
+      \if@master å¤§é˜ªåºœç«‹å¤§å­¦å¤§å­¦é™¢å·¥å­¦ç ”ç©¶ç§‘é›»æ°—ãƒ»æƒ…å ±ç³»å°‚æ”»çŸ¥èƒ½æƒ…å ±å·¥å­¦åˆ†é‡\else
+      å¤§é˜ªåºœç«‹å¤§å­¦å·¥å­¦éƒ¨çŸ¥èƒ½æƒ…å ±å·¥å­¦ç§‘\fi}}}%
   \def\sectionmark##1{\markright{{\@sectmarkfont%
-    \ifnum\c@secnumdepth>\z@\if@appendix •t˜^\fi\thesection\hskip1em\relax\fi
+    \ifnum\c@secnumdepth>\z@\if@appendix ä»˜éŒ²\fi\thesection\hskip1em\relax\fi
     \if@head@upper\uppercase{##1}\else##1\fi}}}}
 \pagestyle{iepheadings}
 
-% ’†•\†
-\def\syusa#1{\def\@syusa{#1}}\syusa{}%å¸
-\def\hukusa#1#2#3{\def\@hukusai{#1}\def\@hukusaii{#2}\def\@hukusaiii{#3}}\hukusa{}{}{}%•›¸
+% ä¸­è¡¨ç´™
+\def\syusa#1{\def\@syusa{#1}}\syusa{}%ä¸»æŸ»
+\def\hukusa#1#2#3{\def\@hukusai{#1}\def\@hukusaii{#2}\def\@hukusaiii{#3}}\hukusa{}{}{}%å‰¯æŸ»
 
-\def\group#1{\def\@group{#1}}\group{} %Œ¤‹†ƒOƒ‹[ƒv
-\def\shidou#1{\def\@shidou{#1}}\shidou{} %w“±‹³Š¯
+\def\group#1{\def\@group{#1}}\group{} %ç ”ç©¶ã‚°ãƒ«ãƒ¼ãƒ—
+\def\shidou#1{\def\@shidou{#1}}\shidou{} %æŒ‡å°æ•™å®˜
 
-% ŠwĞ”Ô†
+% å­¦ç±ç•ªå·
 \def\gakuseki#1{\def\@gakuseki{#1}\@ifnextchar[{\@ismaster}{\@ismaster[M]}}
 \def\@ismaster[#1]{\if#1M\@mastertrue\else\if#1B\@masterfalse\fi\fi}
 
@@ -188,64 +188,65 @@
 \def\maketitle{\begin{titlepage}
   \if@master \vbox to 210mm{
   \large\vspace*{20mm}
-  \vbox to9mm{\hskip33mm\hbox to 70mm{\Huge CmŠwˆÊ˜_•¶}}\par
+  \vbox to9mm{\hskip33mm\hbox to 70mm{\Huge ä¿®å£«å­¦ä½è«–æ–‡}}\par
   \hskip0mm\vbox{\hrule height1pt width139mm}\par
-  \vskip1mm\vbox to 5mm{\hskip54mm\hbox to 30mm{‘è\hfill –Ú}}\par\vskip-3mm
+  \vskip1mm\vbox to 5mm{\hskip54mm\hbox to 30mm{é¡Œ\hfill ç›®}}\par\vskip-3mm
   \hskip0mm\vbox to 24mm{\vfil\hbox to 139mm{
     \parbox{139mm}{\LARGE\centering\baselineskip25pt\@title}}\par\vskip1pt}
   \par\vskip-5mm\hskip0mm\vbox{\hrule height1pt width139mm}\vskip12mm
-  \hskip22mm\vbox to 5mm{\hbox to 83mm{ å~¸\hfil\@syusa\hfil}%
+  \hskip22mm\vbox to 5mm{\hbox to 83mm{ ä¸»~æŸ»\hfil\@syusa\hfil}%
     \hrule height1pt width83mm}\par\vskip6mm
-  \hskip22mm\vbox to 5mm{\hbox to 83mm{ •›~¸\hfil\@hukusai\hfil}%
+  \hskip22mm\vbox to 5mm{\hbox to 83mm{ å‰¯~æŸ»\hfil\@hukusai\hfil}%
     \hrule height1pt width83mm}\par\vskip6mm
-  \hskip22mm\vbox to 5mm{\hbox to 83mm{ •›~¸\hfil\@hukusaii\hfil}%
+  \hskip22mm\vbox to 5mm{\hbox to 83mm{ å‰¯~æŸ»\hfil\@hukusaii\hfil}%
     \hrule height1pt width83mm}\par\vskip6mm
-  \hskip22mm\vbox to 5mm{\hbox to 83mm{ •›~¸\hfil\@hukusaiii\hfil}%
+  \hskip22mm\vbox to 5mm{\hbox to 83mm{ å‰¯~æŸ»\hfil\@hukusaiii\hfil}%
     \hrule height1pt width83mm}\par\vskip29mm
   \hskip24mm\vbox{\hbox to 83mm{%
-      \mbox{•½~¬}\ifnum\nendo=0 Œ³\else\number\nendo\fi ”N
-      i \number\nendoad ”Nj\mbox{“x~C~—¹}}}\par\vskip10mm
+      \mbox{å¹³~æˆ}\ifnum\nendo=0 å…ƒ\else\number\nendo\fi å¹´
+      ï¼ˆ \number\nendoad å¹´ï¼‰\mbox{åº¦~ä¿®~äº†}}}\par\vskip10mm
   \hskip5mm\vbox to 5mm{\hbox to132mm{%
-      \hbox to55mm{iNo. \hfil\@gakuseki\hfil j}\hfil
+      \hbox to55mm{ï¼ˆNo. \hfil\@gakuseki\hfil ï¼‰}\hfil
     \@author\hfil}}\par\vskip-5mm
   \hskip4mm\vbox{\hrule height1pt width132mm}
   \vskip19mm
-  \hskip23mm\vbox to12mm{\hbox to 84mm{‘åã•{—§‘åŠw‘åŠw‰@HŠwŒ¤‹†‰È}\vskip-2mm
-    \hbox to 84mm{“d‹CEî•ñŒnêU ’m”\î•ñHŠw•ª–ì}}
+  \hskip23mm\vbox to12mm{\hbox to 84mm{å¤§é˜ªåºœç«‹å¤§å­¦å¤§å­¦é™¢å·¥å­¦ç ”ç©¶ç§‘}\vskip-2mm
+    \hbox to 84mm{é›»æ°—ãƒ»æƒ…å ±ç³»å°‚æ”» çŸ¥èƒ½æƒ…å ±å·¥å­¦åˆ†é‡}}
 }
-\else %B4—p Masaki Onishi
+\else %B4ç”¨ Masaki Onishi
 \vbox to 210mm{
   \large\vspace*{15mm}
-  \vbox to9mm{\hskip27mm\hbox to 82mm{\Huge ‘²‹ÆŒ¤‹†•ñ‘}}\par
+  \vbox to9mm{\hskip27mm\hbox to 82mm{\Huge å’æ¥­ç ”ç©¶å ±å‘Šæ›¸}}\par
   \hskip0mm\vbox{\hrule height1pt width139mm}\par
-  \vskip1mm\vbox to 5mm{\hskip54mm\hbox to 30mm{‘è\hfill –Ú}}\par\vskip-3mm
+  \vskip1mm\vbox to 5mm{\hskip54mm\hbox to 30mm{é¡Œ\hfill ç›®}}\par\vskip-3mm
   \hskip0mm\vbox to 24mm{\vfil\hbox to 139mm{
     \parbox{139mm}{\LARGE\centering\baselineskip25pt\@title}}\par\vskip1pt}
   \par\vskip-5mm\hskip0mm\vbox{\hrule height1pt width139mm}\vskip42mm
-  \hskip22mm\vbox to 5mm{\hbox to 97mm{ Œ¤~‹†~ƒO~ƒ‹~[~ƒv\hfil\@group\hfil}%
+  \hskip22mm\vbox to 5mm{\hbox to 97mm{ ç ”~ç©¶~ã‚°~ãƒ«~ãƒ¼~ãƒ—\hfil\@group\hfil}%
     \hrule height1pt width97mm}\par\vskip6mm
-  \hskip22mm\vbox to 5mm{\hbox to 97mm{ w~“±~‹³~ˆõ\hfil\@shidou\hfil}%
+  \hskip22mm\vbox to 5mm{\hbox to 97mm{ æŒ‡~å°~æ•™~å“¡\hfil\@shidou\hfil}%
     \hrule height1pt width97mm}\par\vskip24mm
   \hskip21mm\vbox{\hbox to 89mm{%
-      \mbox{•½~¬}\ifnum\nendo=0 Œ³\else\number\nendo\fi ”N
-      i \number\nendoad ”Nj\mbox{“x~‘²~‹Æ~}}}\par\vskip10mm
+      %\mbox{ä»¤~å’Œ}\ifnum\nendo=0 å…ƒ\else\number\nendo\fi å¹´
+      %\mbox{ä»¤~å’Œ}\ifnum\nendo=0 å…ƒ\else\number\nendo\fi å¹´
+      ï¼ˆ \number\nendoad å¹´ï¼‰\mbox{åº¦~å’~æ¥­~}}}\par\vskip10mm
   \hskip5mm\vbox to 5mm{\hbox to132mm{%
-      \hbox to60mm{iNo. \hfil\@gakuseki\hfil j}\hfil
+      \hbox to60mm{ï¼ˆNo. \hfil\@gakuseki\hfil ï¼‰}\hfil
     \@author\hfil}}\par\vskip-5mm
   \hskip4mm\vbox{\hrule height1pt width132mm}
   \vskip24mm
-  \hskip22mm\vbox to12mm{\hbox to 97mm{‘åã•{—§‘åŠwHŠw•”’m”\î•ñHŠw‰È}}
+  \hskip22mm\vbox to12mm{\hbox to 97mm{å¤§é˜ªåºœç«‹å¤§å­¦å·¥å­¦éƒ¨çŸ¥èƒ½æƒ…å ±å·¥å­¦ç§‘}}
 }\fi
 \end{titlepage}
 \setcounter{footnote}{0}       % Footnotes start at zero again.
 \let\thanks\relax
 \gdef\@thanks{}\gdef\@author{}\gdef\@title{}\let\maketitle\relax}
 
-% }•\‚Ìİ’è
+% å›³è¡¨ã®è¨­å®š
 \def\engfigurename{Fig.\ }
 \def\engtablename{Table }
-\def\figurename{} }
-\def\tablename{•\ }
+\def\figurename{å›³ }
+\def\tablename{è¡¨ }
 
 \def\fnum@figure@e{\engfigurename \thesection .\thefigure\hskip 5pt}
 \def\fnum@figure@j{\figurename \thesection .\thefigure\hskip 5pt}
@@ -286,27 +287,23 @@
  \hbox to\hsize{\hfil\box\@tempboxa\hfil}
  \fi\fi}
 
-% ”®ŠÂ‹«‚ÌÄ’è‹`
+% æ•°å¼ç’°å¢ƒã®å†å®šç¾©
 \newdimen\mathoffset \mathoffset\indentlength\divide\mathoffset by2
 \def\@offsetmath#1{\@tempdima#1\ifdim\@tempdima>\z@\hskip\@tempdima minus1pt\fi}
 \def\@mathlspace{\@offsetmath\mathoffset}
 \def\@mathrspace{\@offsetmath{-\mathoffset}}
 
-\def\[{\relax\ifmmode\@badmath\else 
+\def\[{\relax\ifmmode\@badmath\else
          \ifvmode \nointerlineskip \makebox[.6\linewidth]\fi$$\openup-1\jot
          \@mathlspace\relax %%$$ BRACE MATCH HACK
          \fi}
-
 \def\]{\relax\ifmmode\ifinner\@badmath\else\@mathrspace $$\fi%%$$ BRACE MATCH HACK
         \else \@badmath \fi\ignorespaces}
-
 \def\equation{\relax
  $$\openup-1\jot\@mathlspace \relax % $$ BRACE MATCHING HACK
  \refstepcounter{equation}}
-
 \def\endequation{\@mathrspace\eqno \@eqnnum % $$ BRACE MATCHING HACK
 $$\global\@ignoretrue}
-
 \def\eqnarray{\stepcounter{equation}\let\@currentlabel=\theequation
 \global\@eqnswtrue
 \global\@eqcnt\z@\tabskip\@centering\let\\=\@eqncr
@@ -315,104 +312,86 @@ $$\openup-1\jot\halign to \displaywidth\bgroup\@eqnsel\@mathlspace\hskip\@center
   \hskip 2\arraycolsep \hfil${##}$\hfil
   &\global\@eqcnt\tw@ \hskip 2\arraycolsep $\displaystyle\tabskip\z@{##}$\hfil
    \tabskip\@centering&\llap{##}\tabskip\z@\cr}
-
 \def\endeqnarray{\@mathrspace\@@eqncr\egroup
       \global\advance\c@equation\m@ne$$\global\@ignoretrue}
-
 \long\def\wholepage#1{\vbox to .9\textheight{\vfill #1\vfill}}
-
-% š‰º‚°ˆ—‚ğs‚¤figure, table, centerŠÂ‹«‚Ìİ’è
+% å­—ä¸‹ã’å‡¦ç†ã‚’è¡Œã†figure, table, centerç’°å¢ƒã®è¨­å®š
 \newdimen\@tmpindentlen
-
 \def\ifigure{\@ifnextchar [{\@ifigure}{\@ifig}}
-
 \def\@ifig{\@tmpindentlen\textwidth \advance\@tmpindentlen by-\indentlength%
 \begin{figure}\hskip\indentlength\begin{minipage}{\@tmpindentlen}}
 \def\endifigure{\end{minipage}\end{figure}}
-
 \def\@ifigure[#1]{%
 \@tmpindentlen\textwidth \advance\@tmpindentlen by-\indentlength%
 \begin{figure}[#1]\hskip\indentlength\begin{minipage}{\@tmpindentlen}}
 \def\endifigure{\end{minipage}\end{figure}}
-
 \def\itable{\@ifnextchar [{\@itable}{\@itab}}
-
 \def\@itab{\@tmpindentlen\textwidth \advance\@tmpindentlen by-\indentlength%
 \begin{table}\hskip\indentlength\begin{minipage}{\@tmpindentlen}}
 \def\enditable{\end{minipage}\end{table}}
-
 \def\@itable[#1]{%
 \@tmpindentlen\textwidth \advance\@tmpindentlen by-\indentlength%
 \begin{table}[#1]\hskip\indentlength\begin{minipage}{\@tmpindentlen}}
 \def\enditable{\end{minipage}\end{table}}
-
 \def\icenter{\@tmpindentlen\textwidth \advance\@tmpindentlen by-\indentlength%
 \begin{minipage}{\@tmpindentlen}\leftmargin\indentlength\begin{center}}
 \def\endicenter{\end{center}\end{minipage}}
-
 \endinput
-%%%%%[ README •K‚¸‚¨“Ç‚İ‰º‚³‚¢ ]%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-›  ‚Í‚¶‚ß‚É
-        •½¬8”N“x‘åã•{—§‘åŠwHŠw•”î•ñHŠw‰ÈCm‹y‚Ñ‘²‹Æ˜_•¶‚ğ·•M‚·
-      ‚é‚½‚ß‚Ì‚à‚Ì‚Å‚·DASCII”ÅLaTeX(ver 2.09)—p‚Å‚ ‚èCNTT”ÅLaTeX‚Å‚Ì
-      “®ì‚Ì•ÛØ‚Í‚ ‚è‚Ü‚¹‚ñD
-
-›  g—p‹–‘øğŒ‚É‚Â‚¢‚Ä
-        ˆÈ‰º‚Ì–€‚ÉŠY“–‚·‚éÒ‚ğœ‚«C–{ƒXƒ^ƒCƒ‹ƒtƒ@ƒCƒ‹‚Ìg—p‚ğ‹–‘ø‚µ
-      ‚Ü‚·D
-          E‚±‚Ì•¶Í(README)‚ğ“Ç‚Ü‚È‚¢ÒD
-          E‚±‚Ì•¶Í‚Ì“à—e‚ğ—‰ğ‚Å‚«‚È‚¢ÒD
-          Eg—p‹–‘øğŒ‚È‚Ç‚±‚Ì•¶Í‚É‘‚©‚ê‚Ä‚¢‚éğŒ‚É‡ˆÓ‚Å‚«‚È‚¢ÒD
-          Eg—p‹–‘øğŒ‚È‚Ç‚±‚Ì•¶Í‚É‘‚©‚ê‚Ä‚¢‚é“à—e‚ğç‚ê‚È‚¢–”‚Íç
-            ‚ç‚È‚¢ÒD
-          E’˜ìÒ‚É–³’f‚Å–{ƒXƒ^ƒCƒ‹ƒtƒ@ƒCƒ‹‚ğ—p‚¢‚Ä‹à‘K“I—˜‰v‚ğ“¾‚æ‚¤
-            ‚Æ‚·‚éÒD
-          EƒtƒŠ[ƒEƒFƒA != PDS‚ğ—‰ğ‚µ‚Ä‚¢‚È‚¢ÒD
-          E‚±‚Ìƒtƒ@ƒCƒ‹‚ğ–³’f•¡»‚µg—p‚·‚éÒD
-
-›  ’˜ìŒ ‚É‚Â‚¢‚Ä
-      E–{ƒXƒ^ƒCƒ‹ƒtƒ@ƒCƒ‹‚ÍCƒtƒŠ[ƒEƒFƒA‚Å‚ ‚èC’˜ìŒ ‚ğ•úŠü‚µ‚Ä‚¨‚è
-        ‚Ü‚¹‚ñ‚Ì‚ÅCŒë‰ğ‚È‚«‚æ‚¤‚¨Šè‚¢‚µ‚Ü‚·D
-      E–{ƒXƒ^ƒCƒ‹ƒtƒ@ƒCƒ‹‚Ì’˜ìŒ ‚ÍX —²i‚ª•Û—L‚µ‚Ü‚·D
-      E–{ƒXƒ^ƒCƒ‹ƒtƒ@ƒCƒ‹‚Ì‘²˜_—p’†•\†‚Ì’˜ìŒ ‚Í‘å¼ ³‹P‚ª•Û—L‚µ‚Ü‚·D
-      E–{ƒXƒ^ƒCƒ‹ƒtƒ@ƒCƒ‹‹y‚Ñ‚±‚Ì•¶Í’†‚Ì’˜ìŒ •\¦‚ÍÁ‚³‚È‚¢‚Å‰º‚³‚¢D
-
-›  Ä”z•z‚É‚Â‚¢‚Ä
-        –{ƒXƒ^ƒCƒ‹ƒtƒ@ƒCƒ‹‚ÌÄ”z•z‚ğs‚¤ê‡‚ÍCŸ‚Ì–€‚ğ•K‚¸ç‚é‚æ‚¤
-      ‚æ‚ë‚µ‚­‚¨Šè‚¢‚µ‚Ü‚·D
-          E–{ƒXƒ^ƒCƒ‹ƒtƒ@ƒCƒ‹‚Ì”z•z‚ğs‚¤‘O‚ÉC”z•zÒ‚ª’˜ìŒ Ò‚É˜A—
-            ‚·‚é‚±‚ÆD
-          E‚±‚Ì•¶Í‚ğŠÜ‚Ş‘S‚Ä‚Ìƒtƒ@ƒCƒ‹ˆê®‚ğ‚»‚Ì‚Ü‚Ü“¯«‚µ‚½Œ`‚Å”z•z
-            ‚·‚é‚±‚ÆD
-          E–{ƒXƒ^ƒCƒ‹ƒtƒ@ƒCƒ‹‚Ì‰ü•Ï‚Í©—R‚És‚Á‚Ä’¸‚¢‚Ä\‚¢‚Ü‚¹‚ñ‚ªC
-            ‰ü•Ï‚µ‚½ƒXƒ^ƒCƒ‹ƒtƒ@ƒCƒ‹‚ğ”z•z‚·‚éê‡‚É‚ÍC‰ü•ÏÒC‰ü•Ïê
-            Š‚È‚Ç‚ª–¾Šm‚É‚í‚©‚é‚æ‚¤‚É‚µ‚Ä‰º‚³‚¢D‚»‚µ‚ÄC‚±‚Ì•¶Í‚ğ‰ü
-            •Ï‚¹‚¸‚É•K‚¸“Y•t‚µC”z•z‚ğs‚¤‘O‚É”z•zÒ‚ª’˜ìŒ Ò‚É•K‚¸˜A
-            —‚µ‚Ä‰º‚³‚¢D
-
-›  g—pã‚Ì’ˆÓ
-        –{ƒXƒ^ƒCƒ‹ƒtƒ@ƒCƒ‹‚Í–³•ÛØ‚Å‚·D–{ƒXƒ^ƒCƒ‹ƒtƒ@ƒCƒ‹‚Ìg—p‚É‚æ‚Á
-      ‚Ä¶‚¶‚½”@‰½‚È‚éƒgƒ‰ƒuƒ‹C‘¹ŠQ‚ÌÓ‚à’˜ìŒ Ò‚Í•‰‚í‚È‚¢‚à‚Ì‚Æ‚µ‚Ü
-      ‚·D•K‚¸‚²©g‚Ì”»’fAÓ”C‚Ì‚à‚Æ‚É‚²g—p‰º‚³‚¢D
-        ƒoƒOƒŒƒ|[ƒgC‚²ˆÓŒ©C‚²Š´‘zC‚í‚©‚ç‚È‚¢‚±‚Æ‚ª‚ ‚è‚Ü‚µ‚½‚çCì
-      Ò‚Ü‚Å‚¨’m‚ç‚¹‰º‚³‚¢D
-
-›  ƒXƒ^ƒCƒ‹ƒtƒ@ƒCƒ‹‚Ìg—p–@
-        ‚Ü‚¸CƒXƒ^ƒCƒ‹ƒtƒ@ƒCƒ‹‚ğƒpƒX‚Ì’Ê‚Á‚Ä‚¢‚éƒfƒBƒŒƒNƒgƒŠ‚É’u‚«‚Ü‚·D
-      Ÿ‚ÉCTeXƒtƒ@ƒCƒ‹‚Ì‘‚«•û‚Ìˆê—á‚ğ¦‚µ‚Ü‚·D
-
-          %%%%%  “Ç‚İ‚ŞƒXƒ^ƒCƒ‹ƒtƒ@ƒCƒ‹‚ğw’è‚µ‚Ü‚·D
-          %%%%%  ‘¼‚É•K—v‚ÈƒXƒ^ƒCƒ‹ƒtƒ@ƒCƒ‹‚ÍŠe©‚Åw’è‚µ‚Ä‚­‚¾‚³‚¢D
-          %%%%%  ’A‚µCa4j, twocolumn, twoside“™‚Ìw’è‚Í‚µ‚È‚¢‚Å‰º‚³‚¢D
+%%%%%[ README å¿…ãšãŠèª­ã¿ä¸‹ã•ã„ ]%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+â—‹  ã¯ã˜ã‚ã«
+        å¹³æˆ8å¹´åº¦å¤§é˜ªåºœç«‹å¤§å­¦å·¥å­¦éƒ¨æƒ…å ±å·¥å­¦ç§‘ä¿®å£«åŠã³å’æ¥­è«–æ–‡ã‚’åŸ·ç­†ã™
+      ã‚‹ãŸã‚ã®ã‚‚ã®ã§ã™ï¼ASCIIç‰ˆLaTeX(ver 2.09)ç”¨ã§ã‚ã‚Šï¼ŒNTTç‰ˆLaTeXã§ã®
+      å‹•ä½œã®ä¿è¨¼ã¯ã‚ã‚Šã¾ã›ã‚“ï¼
+â—‹  ä½¿ç”¨è¨±è«¾æ¡ä»¶ã«ã¤ã„ã¦
+        ä»¥ä¸‹ã®äº‹é …ã«è©²å½“ã™ã‚‹è€…ã‚’é™¤ãï¼Œæœ¬ã‚¹ã‚¿ã‚¤ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«ã®ä½¿ç”¨ã‚’è¨±è«¾ã—
+      ã¾ã™ï¼
+          ãƒ»ã“ã®æ–‡ç« (README)ã‚’èª­ã¾ãªã„è€…ï¼
+          ãƒ»ã“ã®æ–‡ç« ã®å†…å®¹ã‚’ç†è§£ã§ããªã„è€…ï¼
+          ãƒ»ä½¿ç”¨è¨±è«¾æ¡ä»¶ãªã©ã“ã®æ–‡ç« ã«æ›¸ã‹ã‚Œã¦ã„ã‚‹æ¡ä»¶ã«åˆæ„ã§ããªã„è€…ï¼
+          ãƒ»ä½¿ç”¨è¨±è«¾æ¡ä»¶ãªã©ã“ã®æ–‡ç« ã«æ›¸ã‹ã‚Œã¦ã„ã‚‹å†…å®¹ã‚’å®ˆã‚Œãªã„åˆã¯å®ˆ
+            ã‚‰ãªã„è€…ï¼
+          ãƒ»è‘—ä½œè€…ã«ç„¡æ–­ã§æœ¬ã‚¹ã‚¿ã‚¤ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ç”¨ã„ã¦é‡‘éŠ­çš„åˆ©ç›Šã‚’å¾—ã‚ˆã†
+            ã¨ã™ã‚‹è€…ï¼
+          ãƒ»ãƒ•ãƒªãƒ¼ã‚¦ã‚§ã‚¢ != PDSã‚’ç†è§£ã—ã¦ã„ãªã„è€…ï¼
+          ãƒ»ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ç„¡æ–­è¤‡è£½ã—ä½¿ç”¨ã™ã‚‹è€…ï¼
+â—‹  è‘—ä½œæ¨©ã«ã¤ã„ã¦
+      ãƒ»æœ¬ã‚¹ã‚¿ã‚¤ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«ã¯ï¼Œãƒ•ãƒªãƒ¼ã‚¦ã‚§ã‚¢ã§ã‚ã‚Šï¼Œè‘—ä½œæ¨©ã‚’æ”¾æ£„ã—ã¦ãŠã‚Š
+        ã¾ã›ã‚“ã®ã§ï¼Œèª¤è§£ãªãã‚ˆã†ãŠé¡˜ã„ã—ã¾ã™ï¼
+      ãƒ»æœ¬ã‚¹ã‚¿ã‚¤ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«ã®è‘—ä½œæ¨©ã¯æ£® éš†å¸ãŒä¿æœ‰ã—ã¾ã™ï¼
+      ãƒ»æœ¬ã‚¹ã‚¿ã‚¤ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«ã®å’è«–ç”¨ä¸­è¡¨ç´™ã®è‘—ä½œæ¨©ã¯å¤§è¥¿ æ­£è¼ãŒä¿æœ‰ã—ã¾ã™ï¼
+      ãƒ»æœ¬ã‚¹ã‚¿ã‚¤ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«åŠã³ã“ã®æ–‡ç« ä¸­ã®è‘—ä½œæ¨©è¡¨ç¤ºã¯æ¶ˆã•ãªã„ã§ä¸‹ã•ã„ï¼
+â—‹  å†é…å¸ƒã«ã¤ã„ã¦
+        æœ¬ã‚¹ã‚¿ã‚¤ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«ã®å†é…å¸ƒã‚’è¡Œã†å ´åˆã¯ï¼Œæ¬¡ã®äº‹é …ã‚’å¿…ãšå®ˆã‚‹ã‚ˆã†
+      ã‚ˆã‚ã—ããŠé¡˜ã„ã—ã¾ã™ï¼
+          ãƒ»æœ¬ã‚¹ã‚¿ã‚¤ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«ã®é…å¸ƒã‚’è¡Œã†å‰ã«ï¼Œé…å¸ƒè€…ãŒè‘—ä½œæ¨©è€…ã«é€£çµ¡
+            ã™ã‚‹ã“ã¨ï¼
+          ãƒ»ã“ã®æ–‡ç« ã‚’å«ã‚€å…¨ã¦ã®ãƒ•ã‚¡ã‚¤ãƒ«ä¸€å¼ã‚’ãã®ã¾ã¾åŒæ¢±ã—ãŸå½¢ã§é…å¸ƒ
+            ã™ã‚‹ã“ã¨ï¼
+          ãƒ»æœ¬ã‚¹ã‚¿ã‚¤ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«ã®æ”¹å¤‰ã¯è‡ªç”±ã«è¡Œã£ã¦é ‚ã„ã¦æ§‹ã„ã¾ã›ã‚“ãŒï¼Œ
+            æ”¹å¤‰ã—ãŸã‚¹ã‚¿ã‚¤ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é…å¸ƒã™ã‚‹å ´åˆã«ã¯ï¼Œæ”¹å¤‰è€…ï¼Œæ”¹å¤‰å ´
+            æ‰€ãªã©ãŒæ˜ç¢ºã«ã‚ã‹ã‚‹ã‚ˆã†ã«ã—ã¦ä¸‹ã•ã„ï¼ãã—ã¦ï¼Œã“ã®æ–‡ç« ã‚’æ”¹
+            å¤‰ã›ãšã«å¿…ãšæ·»ä»˜ã—ï¼Œé…å¸ƒã‚’è¡Œã†å‰ã«é…å¸ƒè€…ãŒè‘—ä½œæ¨©è€…ã«å¿…ãšé€£
+            çµ¡ã—ã¦ä¸‹ã•ã„ï¼
+â—‹  ä½¿ç”¨ä¸Šã®æ³¨æ„
+        æœ¬ã‚¹ã‚¿ã‚¤ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«ã¯ç„¡ä¿è¨¼ã§ã™ï¼æœ¬ã‚¹ã‚¿ã‚¤ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«ã®ä½¿ç”¨ã«ã‚ˆã£
+      ã¦ç”Ÿã˜ãŸå¦‚ä½•ãªã‚‹ãƒˆãƒ©ãƒ–ãƒ«ï¼Œæå®³ã®è²¬ã‚‚è‘—ä½œæ¨©è€…ã¯è² ã‚ãªã„ã‚‚ã®ã¨ã—ã¾
+      ã™ï¼å¿…ãšã”è‡ªèº«ã®åˆ¤æ–­ã€è²¬ä»»ã®ã‚‚ã¨ã«ã”ä½¿ç”¨ä¸‹ã•ã„ï¼
+        ãƒã‚°ãƒ¬ãƒãƒ¼ãƒˆï¼Œã”æ„è¦‹ï¼Œã”æ„Ÿæƒ³ï¼Œã‚ã‹ã‚‰ãªã„ã“ã¨ãŒã‚ã‚Šã¾ã—ãŸã‚‰ï¼Œä½œ
+      è€…ã¾ã§ãŠçŸ¥ã‚‰ã›ä¸‹ã•ã„ï¼
+â—‹  ã‚¹ã‚¿ã‚¤ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«ã®ä½¿ç”¨æ³•
+        ã¾ãšï¼Œã‚¹ã‚¿ã‚¤ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ãƒ‘ã‚¹ã®é€šã£ã¦ã„ã‚‹ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«ç½®ãã¾ã™ï¼
+      æ¬¡ã«ï¼ŒTeXãƒ•ã‚¡ã‚¤ãƒ«ã®æ›¸ãæ–¹ã®ä¸€ä¾‹ã‚’ç¤ºã—ã¾ã™ï¼
+          %%%%%  èª­ã¿è¾¼ã‚€ã‚¹ã‚¿ã‚¤ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æŒ‡å®šã—ã¾ã™ï¼
+          %%%%%  ä»–ã«å¿…è¦ãªã‚¹ã‚¿ã‚¤ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«ã¯å„è‡ªã§æŒ‡å®šã—ã¦ãã ã•ã„ï¼
+          %%%%%  ä½†ã—ï¼Œa4j, twocolumn, twosideç­‰ã®æŒ‡å®šã¯ã—ãªã„ã§ä¸‹ã•ã„ï¼
           \documentstyle[12pt,iepaper]{jarticle}
-          \title{˜_•¶‘è–Ú}
-          \author{–¼}
-          \gakuseki{ŠwĞ”Ô†}[B]  %\
-          \group{}                %| ‘²˜_‚Ìê‡.
+          \title{è«–æ–‡é¡Œç›®}
+          \author{æ°å}
+          \gakuseki{å­¦ç±ç•ªå·}[B]  %\
+          \group{}                %| å’è«–ã®å ´åˆ.
           \shidou{}               %/
-          \gakuseki{ŠwĞ”Ô†}[M]  % \
-          \syusa{}                % | C˜_‚Ìê‡D
+          \gakuseki{å­¦ç±ç•ªå·}[M]  % \
+          \syusa{}                % | ä¿®è«–ã®å ´åˆï¼
           \hukusa{}{}             % /
           \begin{document}
           \maketitle
@@ -422,8 +401,8 @@ $$\openup-1\jot\halign to \displaywidth\bgroup\@eqnsel\@mathlspace\hskip\@center
           \pagenumbering{arabic}
           \section{}
           %%%%%
-          %%%%%  c”O‚È‚ª‚çC–{•¶‚Ü‚Å©“®ì¬‚Í‚Å‚«‚Ü‚¹‚ñD
-          %%%%%  –{•¶‚ÍŠe©‚Å‚¨‘‚«‰º‚³‚¢D
+          %%%%%  æ®‹å¿µãªãŒã‚‰ï¼Œæœ¬æ–‡ã¾ã§è‡ªå‹•ä½œæˆã¯ã§ãã¾ã›ã‚“ï¼
+          %%%%%  æœ¬æ–‡ã¯å„è‡ªã§ãŠæ›¸ãä¸‹ã•ã„ï¼
           %%%%%
           \acknowledgements
           \begin{thebibliography}
@@ -432,25 +411,21 @@ $$\openup-1\jot\halign to \displaywidth\bgroup\@eqnsel\@mathlspace\hskip\@center
           \appendix
           \section{}
           \end{document}
-
-      Œã‚ÍƒRƒ“ƒpƒCƒ‹‚µ‚Äˆóü‚µ‚ÄI‚è‚Å‚·D
-
-›  ’Ç‰Á‹y‚ÑC³‚³‚ê‚½ƒRƒ}ƒ“ƒh‹y‚Ñƒpƒ‰ƒ[ƒ^‚Ì—˜—p–@
-
-Ÿ  \caption[1st_entry]{japanese_headings}{english_headings}
-        “ú–{Œê‚Æ‰pŒê‚Ìƒ^ƒCƒgƒ‹‚ğw’è‚·‚é‚æ‚¤‚É‚È‚Á‚Ä‚¢‚Ü‚·DÈ—ª‚Í‚Å‚«
-      ‚Ü‚¹‚ñD
-      1st_entry ‚ÍƒIƒŠƒWƒiƒ‹‚Ì \caption ‚Æ“¯‚¶‚à‚Ì‚Å‚·D
-      }‚â•\‚Ì”Ô†‚ÍC(ƒZƒNƒVƒ‡ƒ“”Ô†).(}‚â•\‚Ì”Ô†)‚Æ‚È‚è‚Ü‚·D
-
-Ÿ  \indentlength
-        \indentlength‚¾‚¯š‰º‚°‚µ‚½—Ìˆæ‚ğ–{•¶‚Ì—Ìˆæ‚É‚µ‚Ü‚·D’A‚µC
-      ƒZƒNƒVƒ‡ƒ“–¼‚Íš‰º‚°‚ğs‚¢‚Ü‚¹‚ñD
-      ‚±‚Ìƒpƒ‰ƒ[ƒ^‚Ì’l‚ğ•ÏX‚·‚é‚Æ‚«‚Í\changeindent‚ğg—p‚µ‚Ü‚·D
-      ƒpƒ‰ƒ[ƒ^‚Ì•ÏX‚ÍC\sectionƒRƒ}ƒ“ƒh‚ÌŒã‚Å—LŒø‚Å‚·D
+      å¾Œã¯ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã—ã¦å°åˆ·ã—ã¦çµ‚ã‚Šã§ã™ï¼
+â—‹  è¿½åŠ åŠã³ä¿®æ­£ã•ã‚ŒãŸã‚³ãƒãƒ³ãƒ‰åŠã³ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®åˆ©ç”¨æ³•
+â—†  \caption[1st_entry]{japanese_headings}{english_headings}
+        æ—¥æœ¬èªã¨è‹±èªã®ã‚¿ã‚¤ãƒˆãƒ«ã‚’æŒ‡å®šã™ã‚‹ã‚ˆã†ã«ãªã£ã¦ã„ã¾ã™ï¼çœç•¥ã¯ã§ã
+      ã¾ã›ã‚“ï¼
+      1st_entry ã¯ã‚ªãƒªã‚¸ãƒŠãƒ«ã® \caption ã¨åŒã˜ã‚‚ã®ã§ã™ï¼
+      å›³ã‚„è¡¨ã®ç•ªå·ã¯ï¼Œ(ã‚»ã‚¯ã‚·ãƒ§ãƒ³ç•ªå·).(å›³ã‚„è¡¨ã®ç•ªå·)ã¨ãªã‚Šã¾ã™ï¼
+â—†  \indentlength
+        \indentlengthã ã‘å­—ä¸‹ã’ã—ãŸé ˜åŸŸã‚’æœ¬æ–‡ã®é ˜åŸŸã«ã—ã¾ã™ï¼ä½†ã—ï¼Œ
+      ã‚»ã‚¯ã‚·ãƒ§ãƒ³åã¯å­—ä¸‹ã’ã‚’è¡Œã„ã¾ã›ã‚“ï¼
+      ã“ã®ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®å€¤ã‚’å¤‰æ›´ã™ã‚‹ã¨ãã¯\changeindentã‚’ä½¿ç”¨ã—ã¾ã™ï¼
+      ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®å¤‰æ›´ã¯ï¼Œ\sectionã‚³ãƒãƒ³ãƒ‰ã®å¾Œã§æœ‰åŠ¹ã§ã™ï¼
           \changeindent{2cm}
-      ”®ƒ‚[ƒh ( \[ \] ‚â \begin{equation}...\end{equation} )‚Å‚Í
-      š‰º‚°‚ªs‚í‚ê‚Ü‚¹‚ñD\mathoffset‚Å’²®‚ğs‚Á‚Ä‚¢‚Ü‚·D
+      æ•°å¼ãƒ¢ãƒ¼ãƒ‰ ( \[ \] ã‚„ \begin{equation}...\end{equation} )ã§ã¯
+      å­—ä¸‹ã’ãŒè¡Œã‚ã‚Œã¾ã›ã‚“ï¼\mathoffsetã§èª¿æ•´ã‚’è¡Œã£ã¦ã„ã¾ã™ï¼
           |<-------------- \textwidth ----------->|
           |           |                           |
           |1 section  |                           |
@@ -462,12 +437,10 @@ $$\openup-1\jot\halign to \displaywidth\bgroup\@eqnsel\@mathlspace\hskip\@center
           |<--------->|                           |
           |           |                           |
           |           |                           |
-
-Ÿ  \mathoffset
-        ”®‚ÌƒeƒLƒXƒg‚Ì’†S‚©‚ç‚ÌƒIƒtƒZƒbƒg‚ğw’è‚µ‚Ü‚·Dƒpƒ‰ƒ[ƒ^‚Ì
-      •ÏX‚Í\setlength‚ğg—p‚µ‚Ü‚·D
+â—†  \mathoffset
+        æ•°å¼ã®ãƒ†ã‚­ã‚¹ãƒˆã®ä¸­å¿ƒã‹ã‚‰ã®ã‚ªãƒ•ã‚»ãƒƒãƒˆã‚’æŒ‡å®šã—ã¾ã™ï¼ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®
+      å¤‰æ›´ã¯\setlengthã‚’ä½¿ç”¨ã—ã¾ã™ï¼
           \setlength{\mathoffset}{\indentlength}
-
           |                     | \mathoffset = 0     |
           |                     v                     |
           |                   X = a                   |
@@ -475,116 +448,94 @@ $$\openup-1\jot\halign to \displaywidth\bgroup\@eqnsel\@mathlspace\hskip\@center
           |         |<--------->|<----------->|       |
           |         |           |             |       |
           |       X = a                     X = a     |
-
-Ÿ  \sectionmarkfont{fontsize}
-        ’Œ‚ÌƒZƒNƒVƒ‡ƒ“‚ğ‘‚­Û‚É—p‚¢‚éƒtƒHƒ“ƒgƒTƒCƒY‚ğw’è‚µ‚Ü‚·D
+â—†  \sectionmarkfont{fontsize}
+        æŸ±ã®ã‚»ã‚¯ã‚·ãƒ§ãƒ³ã‚’æ›¸ãéš›ã«ç”¨ã„ã‚‹ãƒ•ã‚©ãƒ³ãƒˆã‚µã‚¤ã‚ºã‚’æŒ‡å®šã—ã¾ã™ï¼
           \sectionmarkfont{\normalsize}
-
-Ÿ  \wholepage{figure or table}
-        1‚Â‚Ì}‚â•\‚ğ1ƒy[ƒW‚É‚¢‚ê‚é‚Æ‚«‚ÉC‚’¼•ûŒü‚ÉƒZƒ“ƒ^ƒŠƒ“ƒO‚ğs
-      ‚¢‚Ü‚·D
+â—†  \wholepage{figure or table}
+        1ã¤ã®å›³ã‚„è¡¨ã‚’1ãƒšãƒ¼ã‚¸ã«ã„ã‚Œã‚‹ã¨ãã«ï¼Œå‚ç›´æ–¹å‘ã«ã‚»ãƒ³ã‚¿ãƒªãƒ³ã‚°ã‚’è¡Œ
+      ã„ã¾ã™ï¼
           \begin{figure}
           \wholepage{epsfile{file=sample.pstex}\caption{foo}{bar}}
           \end{figure}
-
-Ÿ  \ifigure, \itable, \icenter
-        ‰¡•ûŒü‚É\indentlengthƒXƒLƒbƒv‚µ‚½ˆÊ’u‚©‚çƒZƒ“ƒ^ƒŠƒ“ƒO‚ğs‚¤D
-
-‚±‚±‚©‚çŒã‚ÍC„‚ªC³‚ğ‰Á‚¦‚½‚à‚Ì‚Å‚·D
-
-Ÿ  \acknowledgements
-        Ó«‚ğ‘‚­‚Æ‚«‚Ég‚¢‚Ü‚·DƒZƒNƒVƒ‡ƒ“”Ô†‚È‚µ‚Å`Ó«'‚Æ•\¦‚µC
-      –ÚŸ‚Ì•û‚É‚à“¯—l‚ÉƒZƒNƒVƒ‡ƒ“”Ô†‚È‚µ‚Å`Ó«'‚Æ•\¦‚µ‚Ü‚·D
-
-Ÿ  \acknowledgename{title}
-        Ó«‚Æ‘‚©‚¸‚É title ‚É’u‚«Š·‚¦‚Ü‚·D
-
-Ÿ  \refname{title}
-        Ql•¶Œ£‚Æ‘‚©‚¸‚É title ‚É’u‚«Š·‚¦‚Ü‚·D
-
-Ÿ  \roundbracket
-        Ql•¶Œ£‚Ì”Ô†‚ğ()‚ÅŠ‡‚éDƒfƒtƒHƒ‹ƒg‚Í[]‚Å‚·D
-
-Ÿ  \appendix
-        •t˜^‚ğ‘‚«‚Í‚¶‚ß‚é‘O‚Éw’è‚µ‚Ü‚·DƒZƒNƒVƒ‡ƒ“”Ô†‚Í‰p‘å•¶š‚ÅA
-      ‚©‚çn‚Ü‚è‚Ü‚·D–{•¶‚Å‚ÍŸ‚Ì‚æ‚¤‚É‚È‚è‚Ü‚·D
-          •t˜^A ŒvZ‚ÌƒtƒHƒ[
-                ®(1)‚Ì...
+â—†  \ifigure, \itable, \icenter
+        æ¨ªæ–¹å‘ã«\indentlengthã‚¹ã‚­ãƒƒãƒ—ã—ãŸä½ç½®ã‹ã‚‰ã‚»ãƒ³ã‚¿ãƒªãƒ³ã‚°ã‚’è¡Œã†ï¼
+ã“ã“ã‹ã‚‰å¾Œã¯ï¼Œç§ãŒä¿®æ­£ã‚’åŠ ãˆãŸã‚‚ã®ã§ã™ï¼
+â—†  \acknowledgements
+        è¬è¾ã‚’æ›¸ãã¨ãã«ä½¿ã„ã¾ã™ï¼ã‚»ã‚¯ã‚·ãƒ§ãƒ³ç•ªå·ãªã—ã§`è¬è¾'ã¨è¡¨ç¤ºã—ï¼Œ
+      ç›®æ¬¡ã®æ–¹ã«ã‚‚åŒæ§˜ã«ã‚»ã‚¯ã‚·ãƒ§ãƒ³ç•ªå·ãªã—ã§`è¬è¾'ã¨è¡¨ç¤ºã—ã¾ã™ï¼
+â—†  \acknowledgename{title}
+        è¬è¾ã¨æ›¸ã‹ãšã« title ã«ç½®ãæ›ãˆã¾ã™ï¼
+â—†  \refname{title}
+        å‚è€ƒæ–‡çŒ®ã¨æ›¸ã‹ãšã« title ã«ç½®ãæ›ãˆã¾ã™ï¼
+â—†  \roundbracket
+        å‚è€ƒæ–‡çŒ®ã®ç•ªå·ã‚’()ã§æ‹¬ã‚‹ï¼ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã¯[]ã§ã™ï¼
+â—†  \appendix
+        ä»˜éŒ²ã‚’æ›¸ãã¯ã˜ã‚ã‚‹å‰ã«æŒ‡å®šã—ã¾ã™ï¼ã‚»ã‚¯ã‚·ãƒ§ãƒ³ç•ªå·ã¯è‹±å¤§æ–‡å­—ã§A
+      ã‹ã‚‰å§‹ã¾ã‚Šã¾ã™ï¼æœ¬æ–‡ã§ã¯æ¬¡ã®ã‚ˆã†ã«ãªã‚Šã¾ã™ï¼
+          ä»˜éŒ²A è¨ˆç®—ã®ãƒ•ã‚©ãƒ­ãƒ¼
+                å¼(1)ã®...
           A.1 ...
-          •t˜^B ...
-      –ÚŸ‚ÍCŸ‚Ì‚æ‚¤‚É‚È‚è‚Ü‚·D
-          –ÚŸ
-          1 ‚Í‚¶‚ß‚É
-          •t˜^
-          A ŒvZ‚ÌƒtƒHƒ[
+          ä»˜éŒ²B ...
+      ç›®æ¬¡ã¯ï¼Œæ¬¡ã®ã‚ˆã†ã«ãªã‚Šã¾ã™ï¼
+          ç›®æ¬¡
+          1 ã¯ã˜ã‚ã«
+          ä»˜éŒ²
+          A è¨ˆç®—ã®ãƒ•ã‚©ãƒ­ãƒ¼
              A.1
           B
-
-Ÿ  \changecontentsname{name}
-        –ÚŸ‚ğ`name'‚É’u‚«Š·‚¦‚Ü‚·D
-
-›  Ql
-        •t˜^‚ğ‘‚­‚Ì \appendix‚ÌˆÊ’u‚É‚Â‚¢‚ÄCŒ»İ‚í‚©‚Á‚Ä‚¢‚é‚±‚Æ‚É
-      ‚Â‚¢‚Ä‘‚¢‚Ä‚¨‚«‚Ü‚·(‰v–{‚Ì•ñ‚É‚æ‚é)D
-      \includeƒRƒ}ƒ“ƒh‚ğ—p‚¢‚Ä•t˜^‚ğ“Ç‚İ‚Ş‚Æ‚«‚É—á‚¦‚ÎCŸ‚Ì‚æ‚¤‚É‘
-      ‚¢‚Ä‚¢‚Ü‚·‚ÆC–ÚŸ‚Å•t˜^‚Æ‚¢‚¤•¶š‚ªˆê”ÔÅŒã‚É‚­‚é‚±‚Æ‚ª‚ ‚é‚æ‚¤
-      ‚Å‚·D
+â—†  \changecontentsname{name}
+        ç›®æ¬¡ã‚’`name'ã«ç½®ãæ›ãˆã¾ã™ï¼
+â—‹  å‚è€ƒ
+        ä»˜éŒ²ã‚’æ›¸ãæ™‚ã® \appendixã®ä½ç½®ã«ã¤ã„ã¦ï¼Œç¾åœ¨ã‚ã‹ã£ã¦ã„ã‚‹ã“ã¨ã«
+      ã¤ã„ã¦æ›¸ã„ã¦ãŠãã¾ã™(ç›Šæœ¬æ°ã®å ±å‘Šã«ã‚ˆã‚‹)ï¼
+      \includeã‚³ãƒãƒ³ãƒ‰ã‚’ç”¨ã„ã¦ä»˜éŒ²ã‚’èª­ã¿è¾¼ã‚€ã¨ãã«ä¾‹ãˆã°ï¼Œæ¬¡ã®ã‚ˆã†ã«æ›¸
+      ã„ã¦ã„ã¾ã™ã¨ï¼Œç›®æ¬¡ã§ä»˜éŒ²ã¨ã„ã†æ–‡å­—ãŒä¸€ç•ªæœ€å¾Œã«ãã‚‹ã“ã¨ãŒã‚ã‚‹ã‚ˆã†
+      ã§ã™ï¼
           \include{end}
           \appendix
           \include{appendix1}
-      \include‚Ì‚©‚í‚è‚É\input‚ğ—p‚¢‚éê‡‚É‚ÍC‚±‚Ì–â‘è‚Í¶‚¶‚È‚¢‚æ‚¤
-      ‚Å‚·D
-      ‘Îˆ–@‚Æ‚µ‚Ü‚µ‚Ä‚ÍCŸ‚É‚ ‚°‚é‚à‚Ì‚ªl‚¦‚ç‚ê‚Ü‚·D
-          1. \inputƒRƒ}ƒ“ƒh‚ğ—p‚¢‚éD
-          2. \appendix‚ğƒƒCƒ“‚Ìƒtƒ@ƒCƒ‹‚É‘‚©‚¸‚É\include‚Å“Ç‚İ‚Ş
-             ƒtƒ@ƒCƒ‹‚É‘‚¢‚Ä‚¨‚­D
-      •t˜^‚ğ‘‚­‚Æ‚«‚ÌQl‚É‚µ‚Ä‰º‚³‚¢D
-
-›  Ó«
-        –{ƒXƒ^ƒCƒ‹ƒtƒ@ƒCƒ‹‚ğì¬‚·‚é‚É“–‚½‚èCƒIƒŠƒWƒiƒ‹‚ğƒXƒ^ƒCƒ‹ƒtƒ@
-      ƒCƒ‹(A4.tex, eepaper.sty, ultracit.sty)‚ğì¬‚³‚ê‚Ü‚µ‚½tks@leda
-      ‹y‚Ñ‘²‹ÆŒv‰æ•ñ‘—p’†•\†‚ğì¬‚µ‚Ä‚¢‚½‚¾‚¢‚½‘å¼ ³‹PCƒoƒO•ñ
-      ‚ğ’¸‚¢‚½“n•Ó _iC‹Md‚Èî•ñ‚ğ’¸‚¢‚½‰v–{ ¹K‚ÉŠ´Ó’v‚µ‚Ü‚·D
-
-›  ‰ü•Ï—š—ğ
-        * ‚Í–¢ŒöŠJ”Å‚Å‚·D
-
+      \includeã®ã‹ã‚ã‚Šã«\inputã‚’ç”¨ã„ã‚‹å ´åˆã«ã¯ï¼Œã“ã®å•é¡Œã¯ç”Ÿã˜ãªã„ã‚ˆã†
+      ã§ã™ï¼
+      å¯¾å‡¦æ³•ã¨ã—ã¾ã—ã¦ã¯ï¼Œæ¬¡ã«ã‚ã’ã‚‹ã‚‚ã®ãŒè€ƒãˆã‚‰ã‚Œã¾ã™ï¼
+          1. \inputã‚³ãƒãƒ³ãƒ‰ã‚’ç”¨ã„ã‚‹ï¼
+          2. \appendixã‚’ãƒ¡ã‚¤ãƒ³ã®ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ã‹ãšã«\includeã§èª­ã¿è¾¼ã‚€
+             ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ã„ã¦ãŠãï¼
+      ä»˜éŒ²ã‚’æ›¸ãã¨ãã®å‚è€ƒã«ã—ã¦ä¸‹ã•ã„ï¼
+â—‹  è¬è¾
+        æœ¬ã‚¹ã‚¿ã‚¤ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆã™ã‚‹ã«å½“ãŸã‚Šï¼Œã‚ªãƒªã‚¸ãƒŠãƒ«ã‚’ã‚¹ã‚¿ã‚¤ãƒ«ãƒ•ã‚¡
+      ã‚¤ãƒ«(A4.tex, eepaper.sty, ultracit.sty)ã‚’ä½œæˆã•ã‚Œã¾ã—ãŸtks@ledaæ°
+      åŠã³å’æ¥­è¨ˆç”»å ±å‘Šæ›¸ç”¨ä¸­è¡¨ç´™ã‚’ä½œæˆã—ã¦ã„ãŸã ã„ãŸå¤§è¥¿ æ­£è¼æ°ï¼Œãƒã‚°å ±
+      å‘Šã‚’é ‚ã„ãŸæ¸¡è¾º æµ©å¸æ°ï¼Œè²´é‡ãªæƒ…å ±ã‚’é ‚ã„ãŸç›Šæœ¬ æ˜Œå¹¸æ°ã«æ„Ÿè¬è‡´ã—ã¾ã™ï¼
+â—‹  æ”¹å¤‰å±¥æ­´
+        * ã¯æœªå…¬é–‹ç‰ˆã§ã™ï¼
       version 1.0.0 1997.2.27
-        Eeepaper2.sty, ultracit.sty, aa4.tex‚ğ1‚Â‚Ìƒtƒ@ƒCƒ‹‚É‚Ü‚Æ‚ß‚Ä
-          ƒpƒ‰ƒ[ƒ^‹y‚ÑƒRƒ}ƒ“ƒh‚Ì”÷’²®D
+        ãƒ»eepaper2.sty, ultracit.sty, aa4.texã‚’1ã¤ã®ãƒ•ã‚¡ã‚¤ãƒ«ã«ã¾ã¨ã‚ã¦
+          ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿åŠã³ã‚³ãƒãƒ³ãƒ‰ã®å¾®èª¿æ•´ï¼
       version 1.0.1 1997.2.27
-        ECmŠwˆÊ˜_•¶—p’†•\†‚Ìì¬D
+        ãƒ»ä¿®å£«å­¦ä½è«–æ–‡ç”¨ä¸­è¡¨ç´™ã®ä½œæˆï¼
       version 1.0.2 1997.2.27  +(Masaki Onishi)
-        E‘²‹ÆŒ¤‹†•ñ‘’†•\†‚Ìì¬.
+        ãƒ»å’æ¥­ç ”ç©¶å ±å‘Šæ›¸ä¸­è¡¨ç´™ã®ä½œæˆ.
       version 1.0.3 1997.2.28
-        E\acknowledgementsƒRƒ}ƒ“ƒh‚ª\acknowledge‚É‚È‚Á‚Ä‚¢‚½‚Ì‚ğC³
-          (“n•Ó _i‚ÌƒoƒO•ñ‚É‚æ‚é)D
-        E\appendixƒRƒ}ƒ“ƒh‚ÌŒãC”®”Ô†‚ª(1.1)‚Ì‚æ‚¤‚É‚È‚Á‚Ä‚¢‚½‚Ì‚Å
-          (A.1)‚Æ‚È‚é‚æ‚¤‚ÉC³(“n•Ó _i‚ÌƒoƒO•ñ‚É‚æ‚é)D
+        ãƒ»\acknowledgementsã‚³ãƒãƒ³ãƒ‰ãŒ\acknowledgeã«ãªã£ã¦ã„ãŸã®ã‚’ä¿®æ­£
+          (æ¸¡è¾º æµ©å¸æ°ã®ãƒã‚°å ±å‘Šã«ã‚ˆã‚‹)ï¼
+        ãƒ»\appendixã‚³ãƒãƒ³ãƒ‰ã®å¾Œï¼Œæ•°å¼ç•ªå·ãŒ(1.1)ã®ã‚ˆã†ã«ãªã£ã¦ã„ãŸã®ã§
+          (A.1)ã¨ãªã‚‹ã‚ˆã†ã«ä¿®æ­£(æ¸¡è¾º æµ©å¸æ°ã®ãƒã‚°å ±å‘Šã«ã‚ˆã‚‹)ï¼
       version 1.0.4 1997.3.1
-        E’†•\†‚Å”N“x‚ÌŒvZ‚ÉŒë‚è‚ª‚ ‚Á‚½‚Ì‚ğ’¼‚µ‚½D
-
-›  ìÒE’˜ìŒ Ò˜A—æ
-                       mori@com.cs.osakafu-u.ac.jp (1997”N3Œ‚Ü‚Å—LŒø)
+        ãƒ»ä¸­è¡¨ç´™ã§å¹´åº¦ã®è¨ˆç®—ã«èª¤ã‚ŠãŒã‚ã£ãŸã®ã‚’ç›´ã—ãŸï¼
+â—‹  ä½œè€…ãƒ»è‘—ä½œæ¨©è€…é€£çµ¡å…ˆ
+                       mori@com.cs.osakafu-u.ac.jp (1997å¹´3æœˆã¾ã§æœ‰åŠ¹)
                                                               L&D SOFT
                        onishi@com.cs.osakafu-u.ac.jp
                                                          Masaki Onishi
-
-›  ‚¨‚Ü‚¯
-        Å‹ßƒyƒ“ƒl[ƒ€‚Ì—R—ˆ‚ğ’m‚è‚½‚ª‚Á‚Ä‚¢‚él‚ª‘½‚¢‚æ‚¤‚È. . .
-      (•Ğ–Ú‚ğ‚Â‚Ş‚èClw‚µw‚ğO‚É‚ ‚Ä‚È‚ª‚ç)‚»‚ê‚Í”é–§‚Å‚·D(by“ä‚Ìb_Š¯)
-
-%%%%%[ ƒtƒ@ƒCƒ‹‚ÌI‚è‚Å‚· ]%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-======================= ‚±‚±‚Ü‚Å
-
-
+â—‹  ãŠã¾ã‘
+        æœ€è¿‘ãƒšãƒ³ãƒãƒ¼ãƒ ã®ç”±æ¥ã‚’çŸ¥ã‚ŠãŸãŒã£ã¦ã„ã‚‹äººãŒå¤šã„ã‚ˆã†ãª. . .
+      (ç‰‡ç›®ã‚’ã¤ã‚€ã‚Šï¼ŒäººæŒ‡ã—æŒ‡ã‚’å”‡ã«ã‚ã¦ãªãŒã‚‰)ãã‚Œã¯ç§˜å¯†ã§ã™ï¼(byè¬ã®ç£ç¥å®˜)
+%%%%%[ ãƒ•ã‚¡ã‚¤ãƒ«ã®çµ‚ã‚Šã§ã™ ]%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======================= ã“ã“ã¾ã§
        **************************************************
-           ‘åã•{—§‘åŠw‘åŠw‰@ HŠwŒ¤‹†‰È ”m‘OŠú‰Û’ö
-                 “d‹CEî•ñŒnêU  î•ñHŠw•ª–ì
-           ’m”\î•ñuÀ  ‚l‚P ‘O“c‰p–¤q(Emiko Maeda)
+           å¤§é˜ªåºœç«‹å¤§å­¦å¤§å­¦é™¢ å·¥å­¦ç ”ç©¶ç§‘ åšå£«å‰æœŸèª²ç¨‹
+                 é›»æ°—ãƒ»æƒ…å ±ç³»å°‚æ”»  æƒ…å ±å·¥å­¦åˆ†é‡
+           çŸ¥èƒ½æƒ…å ±è¬›åº§  ï¼­ï¼‘ å‰ç”°è‹±å·³å­(Emiko Maeda)
          ----------------------------------------------
               e-mail:maeda@ss.cs.osakafu-u.ac.jp
        **************************************************
-
